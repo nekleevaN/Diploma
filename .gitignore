@@ -43,6 +43,9 @@ logs/
 .DS_Store
 Thumbs.db
 
+# Uploaded user files
+**/wwwroot/uploads/
+
 
 # Docker
 docker-compose.override.yml.local
