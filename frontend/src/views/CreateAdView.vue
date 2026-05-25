@@ -4,7 +4,17 @@
     <div class="card p-8 mt-4">
       <h1 class="text-xl font-bold text-gray-900 mb-6">Нове оголошення</h1>
 
-      <form @submit.prevent="submit" class="space-y-5">
+      <div v-if="!auth.isPayoutEnabled" class="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+        <p class="text-sm font-semibold text-amber-800 mb-1">⚠️ Виплати не налаштовано</p>
+        <p class="text-xs text-amber-700 mb-3">
+          Щоб публікувати оголошення, спочатку підключіть Monobank SubMerchant ID у своєму профілі.
+        </p>
+        <RouterLink to="/profile" class="inline-block text-xs font-medium text-white bg-amber-500 hover:bg-amber-600 px-3 py-1.5 rounded-lg transition-colors">
+          Перейти до профілю
+        </RouterLink>
+      </div>
+
+      <form v-if="auth.isPayoutEnabled" @submit.prevent="submit" class="space-y-5">
         
         <CategoryPicker @selected="onCategorySelected" />
 
@@ -116,6 +126,7 @@
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { catalogApi } from '@/api/catalog'
+import { useAuthStore } from '@/stores/auth'
 import ImageUpload from '@/components/ImageUpload.vue'
 import LocationPicker from '@/components/LocationPicker.vue'
 import CategoryPicker from '@/components/CategoryPicker.vue'
@@ -123,6 +134,7 @@ import AppIcon from '@/components/AppIcon.vue'
 import { CONDITIONS, COLORS, getSizesForSub } from '@/data/categories'
 
 const router = useRouter()
+const auth = useAuthStore()
 
 const form = ref({
   title: '', price: 0, description: '',
