@@ -53,6 +53,8 @@ export const useAuthStore = defineStore('auth', () => {
     trustedContactTelegramId.value = tgId
     trustedContactEmail.value = p?.trusted_email ?? null
 
+    isPayoutEnabled.value = !!p?.sub_merchant_id
+
     localStorage.setItem('token',         newToken)
     localStorage.setItem('userId',        newUserId)
     localStorage.setItem('username',      username.value ?? '')
@@ -63,6 +65,7 @@ export const useAuthStore = defineStore('auth', () => {
     localStorage.setItem('emailConfirmed',String(isEmailConfirmed.value))
     localStorage.setItem('authProvider',  authProvider.value ?? 'email')
     localStorage.setItem('hasDiia',       String(hasDiia.value))
+    localStorage.setItem('payoutEnabled', String(isPayoutEnabled.value))
     if (tgId) localStorage.setItem('trustedTg', String(tgId))
     else localStorage.removeItem('trustedTg')
     if (trustedContactEmail.value) localStorage.setItem('trustedEmail', trustedContactEmail.value)
@@ -127,7 +130,7 @@ export const useAuthStore = defineStore('auth', () => {
     isEmailConfirmed.value = hasDiia.value = false
     ;[
       'token','userId','username','firstName','lastName','displayName',
-      'email','emailConfirmed','authProvider','hasDiia','avatarUrl','trustedTg','trustedEmail'
+      'email','emailConfirmed','authProvider','hasDiia','avatarUrl','trustedTg','trustedEmail','payoutEnabled'
     ].forEach(k => localStorage.removeItem(k))
   }
 

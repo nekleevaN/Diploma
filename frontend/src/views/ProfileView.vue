@@ -103,55 +103,9 @@
       </div>
     </div>
 
-    
+
     <div class="card p-6">
-      <div class="flex items-start gap-4">
-        <div class="text-3xl">🇺🇦</div>
-        <div class="flex-1">
-          <h3 class="font-semibold text-gray-900">Верифікація через Дію</h3>
-          <p class="text-sm text-gray-500 mt-1">
-            Підтвердіть особу через застосунок Дія. Після верифікації ваш профіль отримає бейдж
-            <span class="text-teal-500 font-medium">DiiaVerified</span>, що підвищує довіру покупців.
-          </p>
-
-          <div v-if="diiaVerified" class="mt-4 flex items-center gap-2 text-teal-500">
-            <AppIcon name="check-circle" size="w-4 h-4" />
-            <span class="text-sm font-medium">Особу підтверджено через Дію</span>
-          </div>
-
-          <template v-else>
-            
-            <div v-if="!sessionId" class="mt-4">
-              <button @click="startDiia" :disabled="diiaLoading" class="btn-primary">
-                <span v-if="diiaLoading">Запит до Дії...</span>
-                <span v-else>Верифікувати через Дію</span>
-              </button>
-            </div>
-
-            
-            <div v-else class="mt-4 space-y-3">
-              <div class="bg-teal-50 border border-teal-200 rounded-lg p-3">
-                <p class="text-xs font-medium text-teal-700 mb-1">Mock-верифікація</p>
-                <p class="text-xs text-teal-600">
-                  Сесія: <code class="font-mono">{{ sessionId }}</code>
-                </p>
-                <p class="text-xs text-teal-500 mt-1">
-                  В production тут відкривається QR-код для сканування в застосунку Дія.
-                </p>
-              </div>
-              <div class="flex gap-2">
-                <button @click="confirmDiia" :disabled="diiaLoading" class="btn-primary">
-                  <span v-if="diiaLoading">...</span>
-                  <span v-else class="flex items-center gap-1"><AppIcon name="check-circle" size="w-4 h-4" /> Підтвердити (mock)</span>
-                </button>
-                <button @click="sessionId = null" class="btn-secondary">Скасувати</button>
-              </div>
-            </div>
-
-            <div v-if="diiaError" class="mt-2 text-sm text-red-600">{{ diiaError }}</div>
-          </template>
-        </div>
-      </div>
+      <DiiaVerification />
     </div>
   </div>
 </template>
@@ -159,9 +113,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useAuthStore } from '@/stores/auth'
-import { authApi } from '@/api/auth'
 import { usersApi } from '@/api/users'
 import AppIcon from '@/components/AppIcon.vue'
+import DiiaVerification from '@/components/DiiaVerification.vue'
 
 const auth = useAuthStore()
 
@@ -196,44 +150,8 @@ async function removePayout() {
   finally { payoutSaving.value = false }
 }
 
-const sessionId = ref<string | null>(null)
-const diiaLoading = ref(false)
-const diiaError = ref('')
-const diiaVerified = ref(auth.hasDiia)
-
 const badges = computed(() => [
   { key: 'email', label: 'Email підтверджено', active: true },
-  { key: 'diia', label: 'Дія верифікація', active: diiaVerified.value }
+  { key: 'diia', label: 'Дія верифікація', active: auth.hasDiia }
 ])
-
-async function startDiia() {
-  diiaLoading.value = true
-  diiaError.value = ''
-  try {
-    const { data } = await authApi.startDiia()
-    sessionId.value = data.sessionId
-  } catch (e: unknown) {
-    const err = e as { response?: { data?: { error?: string } } }
-    diiaError.value = err.response?.data?.error ?? 'Помилка запиту'
-  } finally {
-    diiaLoading.value = false
-  }
-}
-
-async function confirmDiia() {
-  if (!sessionId.value) return
-  diiaLoading.value = true
-  diiaError.value = ''
-  try {
-    await authApi.confirmDiia(sessionId.value)
-    diiaVerified.value = true
-    auth.setDiiaVerified()
-    sessionId.value = null
-  } catch (e: unknown) {
-    const err = e as { response?: { data?: { error?: string } } }
-    diiaError.value = err.response?.data?.error ?? 'Помилка підтвердження'
-  } finally {
-    diiaLoading.value = false
-  }
-}
 </script>
