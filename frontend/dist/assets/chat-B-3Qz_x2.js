@@ -1,0 +1,1 @@
+import{I as s}from"./index-DF8K8NIw.js";const h={startChat:(t,a,e)=>s.post("/chats",{sellerId:t,advertisementId:a,adTitle:e}),getMyChats:()=>s.get("/chats"),getById:t=>s.get(`/chats/${t}`),sendMessage:(t,a)=>s.post(`/chats/${t}/messages`,{content:a})};export{h as c};

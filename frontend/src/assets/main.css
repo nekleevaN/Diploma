@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f4ede4; /* ivory-300 */
+    color: #1a1a1a;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-5 py-2.5
+           bg-teal-500 text-white text-sm font-semibold rounded-lg
+           hover:bg-teal-600 active:bg-teal-700
+           focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2
+           transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-5 py-2.5
+           bg-ivory-100 text-gray-700 text-sm font-semibold rounded-lg
+           border border-gray-200 hover:border-teal-500 hover:text-teal-600
+           focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2
+           transition-all duration-200
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .input {
+    @apply w-full px-4 py-2.5 border border-gray-200 rounded-lg text-sm
+           bg-ivory-100
+           focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent
+           placeholder-gray-400 transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-ivory-100 rounded-2xl border border-ivory-400 shadow-sm;
+  }
+}
+
+/* ── Fade transition for filter grid ───────────────────── */
+.fade-enter-active { transition: opacity 0.25s ease; }
+.fade-leave-active { transition: opacity 0.15s ease; }
+.fade-enter-from,
+.fade-leave-to     { opacity: 0; }
+
+/* ── Stagger list items on appear ───────────────────────── */
+.grid-appear-enter-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.grid-appear-enter-from {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* ── Scrollbar hide ─────────────────────────────────────── */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── Form controls accent color ─────────────────────────── */
+:root {
+  accent-color: #708238;
+}

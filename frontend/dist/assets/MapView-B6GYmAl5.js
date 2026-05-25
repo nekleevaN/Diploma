@@ -1,0 +1,16 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/leaflet-Dgihpmma.css"])))=>i.map(i=>d[i]);
+import{d as y,y as v,_ as m,z as b,c as f,a as n,k as w,e as k,t as z,f as A,r as l,o as u}from"./index-DF8K8NIw.js";import{c as $}from"./catalog-CvHFtbFg.js";import{_ as E}from"./AppIcon.vue_vue_type_script_setup_true_lang-tJ71s-Xd.js";const V={class:"h-[calc(100vh-56px)] flex flex-col"},L={class:"bg-white border-b border-gray-200 px-4 py-3 flex items-center gap-3 shrink-0"},N={class:"text-base font-bold text-gray-900 flex items-center gap-1.5"},T={class:"text-xs text-gray-400"},B={key:0,class:"absolute inset-0 flex items-center justify-center bg-white/80 z-10"},C=y({__name:"MapView",setup(I){const r=l(null),d=l([]),p=l(!0);let e=null;const x={Електроніка:"💻",Телефони:"📱",Одяг:"👕",Взуття:"👟",Меблі:"🛋️",Авто:"🚗",Книги:"📚",Спорт:"⚽"};return v(async()=>{var s;const o=(await m(async()=>{const{default:a}=await import("./leaflet-src-DTmlu4rB.js").then(t=>t.l);return{default:a}},[])).default;if(await m(()=>Promise.resolve({}),__vite__mapDeps([0])),!!r.value){e=o.map(r.value).setView([49,31],6),o.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap contributors"}).addTo(e);try{const{data:a}=await $.getMapAds();d.value=a;for(const t of a){const i=x[t.category]??"🏷️",g=o.divIcon({className:"",html:`<div style="font-size:28px;cursor:pointer;filter:drop-shadow(0 2px 4px rgba(0,0,0,.25));transition:transform .15s"
+               onmouseover="this.style.transform='scale(1.2)'"
+               onmouseout="this.style.transform='scale(1)'">${i}</div>`,iconSize:[32,32],iconAnchor:[16,32],popupAnchor:[0,-32]}),c=(s=t.imageUrls)==null?void 0:s[0],_=c?`<img src="${c}" style="width:100%;height:80px;object-fit:cover;border-radius:6px;margin-bottom:6px">`:"",h=o.popup({maxWidth:220,className:"ad-popup"}).setContent(`
+        <div style="font-family:sans-serif;min-width:180px">
+          ${_}
+          <p style="font-size:13px;font-weight:600;margin:0 0 2px;line-height:1.3">${t.title}</p>
+          <p style="font-size:15px;font-weight:700;color:#16a34a;margin:0 0 4px">₴${t.price.toLocaleString()}</p>
+          ${t.locationAddress?`<p style="font-size:11px;color:#6b7280;margin:0 0 6px">📍 ${t.locationAddress}</p>`:""}
+          <a href="/ads/${t.id}"
+             onclick="window.location.href='/ads/${t.id}';return false"
+             style="display:inline-block;padding:4px 10px;background:#2563eb;color:white;border-radius:6px;font-size:12px;text-decoration:none">
+            Переглянути →
+          </a>
+        </div>
+      `);o.marker([t.latitude,t.longitude],{icon:g}).addTo(e).bindPopup(h)}if(a.length>0){const t=o.latLngBounds(a.map(i=>[i.latitude,i.longitude]));e.fitBounds(t,{padding:[50,50],maxZoom:13})}}finally{p.value=!1}}}),b(()=>{e==null||e.remove()}),(o,s)=>(u(),f("div",V,[n("div",L,[n("h1",N,[w(E,{name:"map",size:"w-4 h-4"}),s[0]||(s[0]=k(" Карта оголошень",-1))]),n("span",T,z(d.value.length)+" оголошень з локацією",1)]),n("div",{ref_key:"mapEl",ref:r,class:"flex-1"},null,512),p.value?(u(),f("div",B,[...s[1]||(s[1]=[n("span",{class:"text-gray-400 text-sm"},"Завантаження карти...",-1)])])):A("",!0)]))}});export{C as default};

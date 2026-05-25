@@ -1,0 +1,1 @@
+import{I as a}from"./index-DF8K8NIw.js";const s={getAll:e=>a.get("/ads",{params:e}),getById:e=>a.get(`/ads/${e}`),create:e=>a.post("/ads",e),addImage:(e,t)=>a.post(`/ads/${e}/images`,{url:t}),updateAd:(e,t)=>a.put(`/ads/${e}`,t),deleteAd:e=>a.delete(`/ads/${e}`),getMapAds:()=>a.get("/ads/map"),getBySeller:e=>a.get(`/ads/by-seller/${e}`)};export{s as c};
