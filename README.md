@@ -120,7 +120,7 @@ npm install
 npm run dev
 ```
 
-Фронтенд: http://localhost:5173
+Фронтенд: http://localhost:3000
 
 ---
 
@@ -160,10 +160,12 @@ dotnet test
 
 ```json
 {
+  "firstName": "Іван",
+  "lastName": "Коваль",
   "email": "user@example.com",
   "password": "Password123!",
-  "firstName": "Іван",
-  "lastName": "Коваль"
+  "passwordConfirm": "Password123!",
+  "agreeToTerms": true
 }
 ```
 
@@ -180,6 +182,7 @@ dotnet test
 
 ```json
 {
+  "userId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
   "token": "eyJhbGciOiJIUzI1NiIs..."
 }
 ```
@@ -188,11 +191,11 @@ dotnet test
 
 ### Оголошення
 
-**GET /api/advertisements?search=велосипед**
+**GET /api/ads?search=велосипед**
 
-Пошук оголошень за ключовим словом.
+Пошук оголошень за ключовим словом. Підтримує також фільтри: `category`, `priceMin`, `priceMax`, `condition`, `brand`, `sortBy`, `page`, `pageSize`.
 
-**POST /api/advertisements**
+**POST /api/ads**
 
 ```json
 {
@@ -207,16 +210,19 @@ dotnet test
 
 ### Замовлення та оплата
 
-**POST /api/orders**
+**POST /api/payment/create**
 
 ```json
 {
-  "advertisementId": "...",
+  "advertisementId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "sellerId": "7c9e6679-7425-40de-944b-e07fc1f90ae7",
+  "adTitle": "Велосипед Trek",
+  "amount": 3500,
   "hasDelivery": true
 }
 ```
 
-**Response** містить посилання на оплату Monobank (`paymentUrl`).
+**Response** містить посилання на оплату Monobank (`pageUrl`).
 
 ---
 
