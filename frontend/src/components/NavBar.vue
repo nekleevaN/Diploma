@@ -67,9 +67,9 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A2 2 0 013 12V7a4 4 0 014-4z"/>
             </svg>
             <span class="hidden md:inline">Торги</span>
-            <span v-if="pendingOffersCount > 0"
+            <span v-if="notifications.pendingOffersCount > 0"
               class="absolute top-1 right-1 w-4 h-4 bg-red-500 text-white text-[10px] rounded-full flex items-center justify-center leading-none font-bold">
-              {{ pendingOffersCount }}
+              {{ notifications.pendingOffersCount }}
             </span>
           </RouterLink>
 
@@ -116,9 +116,9 @@
                   @error="avatarError = true" />
                 <span v-else>{{ (auth.firstName || auth.username)?.charAt(0) }}</span>
               </span>
-              <span v-if="pendingReviewsCount > 0"
+              <span v-if="notifications.pendingReviewsCount > 0"
                 class="absolute -top-1 -right-1 min-w-[16px] h-4 bg-teal-500 text-white text-[10px] rounded-full flex items-center justify-center font-bold px-1 leading-none">
-                {{ pendingReviewsCount }}
+                {{ notifications.pendingReviewsCount }}
               </span>
             </span>
             <span class="hidden lg:block text-sm font-medium text-gray-700 pr-1">
@@ -148,10 +148,10 @@
 import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
-import { offersApi } from '@/api/offers'
-import { reviewsApi } from '@/api/reviews'
+import { useNotificationsStore } from '@/stores/notifications'
 
 const auth = useAuthStore()
+const notifications = useNotificationsStore()
 const router = useRouter()
 const route = useRoute()
 
@@ -174,8 +174,6 @@ function clearSearch() {
 function normalize(s: string): string {
   return s.trim().replace(/\s+/g, ' ')
 }
-const pendingOffersCount = ref(0)
-const pendingReviewsCount = ref(0)
 const avatarError = ref(false)
 const showNoPayoutModal = ref(false)
 
@@ -190,19 +188,10 @@ watch(() => auth.avatarUrl, () => { avatarError.value = false })
 
 let pollInterval: ReturnType<typeof setInterval> | null = null
 
-async function fetchPendingCount() {
-  if (!auth.isAuthenticated) return
-  try {
-    const { data } = await offersApi.getPendingCount()
-    pendingOffersCount.value = data.count
-  } catch {  }
-  try {
-    const { data } = await reviewsApi.getMyPending()
-    pendingReviewsCount.value = data.length
-  } catch {  }
-}
-
-onMounted(() => { fetchPendingCount(); pollInterval = setInterval(fetchPendingCount, 60000) })
+onMounted(() => {
+  if (auth.isAuthenticated) notifications.refresh()
+  pollInterval = setInterval(() => { if (auth.isAuthenticated) notifications.refresh() }, 10000)
+})
 onUnmounted(() => { if (pollInterval) clearInterval(pollInterval) })
 
 function handleLogout() {

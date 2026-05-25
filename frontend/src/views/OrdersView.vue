@@ -189,6 +189,7 @@ import { paymentApi, type OrderDto } from '@/api/payment'
 import { deliveryApi, type DeliveryDto } from '@/api/delivery'
 import { reviewsApi, type PendingReviewDto } from '@/api/reviews'
 import { useAuthStore } from '@/stores/auth'
+import { useNotificationsStore } from '@/stores/notifications'
 import CityWarehousePicker from '@/components/CityWarehousePicker.vue'
 import DeliveryProgress from '@/components/DeliveryProgress.vue'
 import ReviewModal from '@/components/ReviewModal.vue'
@@ -210,6 +211,7 @@ const reviewedOrderIds = reactive<Set<string>>(new Set())
 const activeReview = ref<{ orderId: string; adTitle: string; reviewId: string; reviewType: string } | null>(null)
 const initingReview = ref<string | null>(null)
 const auth = useAuthStore()
+const notifications = useNotificationsStore()
 
 async function loadReviewState() {
   try {
@@ -267,6 +269,7 @@ function onReviewSubmitted() {
     reviewedOrderIds.add(activeReview.value.orderId)
   }
   activeReview.value = null
+  notifications.refresh()
 }
 
 const pendingCount = computed(() =>
