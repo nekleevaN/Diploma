@@ -1,0 +1,184 @@
+services:
+  # ===== INFRASTRUCTURE =====
+  postgres:
+    image: postgres:16-alpine
+    container_name: trustmarket-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_MULTIPLE_DATABASES: trustmarket_users,trustmarket_catalog,trustmarket_chat,trustmarket_finance,trustmarket_reviews
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init-multiple-dbs.sh:/docker-entrypoint-initdb.d/init-multiple-dbs.sh
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: trustmarket-rabbitmq
+    ports:
+      - "5672:5672"      # AMQP
+      - "15672:15672"    # Management UI (http://localhost:15672, guest/guest)
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # ===== APPLICATION SERVICES =====
+  user-service:
+    build:
+      context: .
+      dockerfile: src/Services/UserService/TrustMarket.UserService.Api/Dockerfile
+    container_name: trustmarket-user-service
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__UserDb: "Host=postgres;Port=5432;Database=trustmarket_users;Username=postgres;Password=postgres"
+      RabbitMq__Host: rabbitmq
+      Google__ClientId: "94585970834-khig0ttqaso6ur39il0q7dcafm644l1e.apps.googleusercontent.com"
+    ports:
+      - "5001:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  catalog-service:
+    build:
+      context: .
+      dockerfile: src/Services/CatalogService/TrustMarket.CatalogService.Api/Dockerfile
+    container_name: trustmarket-catalog-service
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__CatalogDb: "Host=postgres;Port=5432;Database=trustmarket_catalog;Username=postgres;Password=postgres"
+      RabbitMq__Host: rabbitmq
+      Jwt__Secret: "ThisIsASecretKeyForDevelopmentOnly_ChangeInProductionPLEASE_min32chars"
+      Jwt__Issuer: "TrustMarket"
+      Jwt__Audience: "TrustMarket.Users"
+    ports:
+      - "5002:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  chat-service:
+    build:
+      context: .
+      dockerfile: src/Services/ChatService/TrustMarket.ChatService.Api/Dockerfile
+    container_name: trustmarket-chat-service
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__ChatDb: "Host=postgres;Port=5432;Database=trustmarket_chat;Username=postgres;Password=postgres"
+      RabbitMq__Host: rabbitmq
+      Jwt__Secret: "ThisIsASecretKeyForDevelopmentOnly_ChangeInProductionPLEASE_min32chars"
+      Jwt__Issuer: "TrustMarket"
+      Jwt__Audience: "TrustMarket.Users"
+    ports:
+      - "5003:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  notification-service:
+    build:
+      context: .
+      dockerfile: src/Services/NotificationService/TrustMarket.NotificationService.Api/Dockerfile
+    container_name: trustmarket-notification-service
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      RabbitMq__Host: rabbitmq
+      Telegram__BotToken: "${TELEGRAM_BOT_TOKEN:-YOUR_BOT_TOKEN_HERE}"
+      Telegram__AdminChatId: "${TELEGRAM_ADMIN_CHAT_ID:-0}"
+    ports:
+      - "5004:8080"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  finance-service:
+    build:
+      context: .
+      dockerfile: src/Services/FinanceService/TrustMarket.FinanceService.Api/Dockerfile
+    container_name: trustmarket-finance-service
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__FinanceDb: "Host=postgres;Port=5432;Database=trustmarket_finance;Username=postgres;Password=postgres"
+      RabbitMq__Host: rabbitmq
+      Jwt__Secret: "ThisIsASecretKeyForDevelopmentOnly_ChangeInProductionPLEASE_min32chars"
+      Jwt__Issuer: "TrustMarket"
+      Jwt__Audience: "TrustMarket.Users"
+      Monobank__Token: "u8gPjKUe5T_Q6UsMYzSngx-OUEbK1NU6NckQutGY77AY"
+      Monobank__WebhookBaseUrl: "${MONOBANK_WEBHOOK_URL:-}"
+      Monobank__RedirectBaseUrl: "http://localhost:3000"
+      CatalogService__BaseUrl: "http://catalog-service:8080/"
+    ports:
+      - "5005:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+      catalog-service:
+        condition: service_started
+
+  review-service:
+    build:
+      context: .
+      dockerfile: src/Services/ReviewService/TrustMarket.ReviewService.Api/Dockerfile
+    container_name: trustmarket-review-service
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__ReviewDb: "Host=postgres;Port=5432;Database=trustmarket_reviews;Username=postgres;Password=postgres"
+      RabbitMq__Host: rabbitmq
+      Jwt__Secret: "ThisIsASecretKeyForDevelopmentOnly_ChangeInProductionPLEASE_min32chars"
+      Jwt__Issuer: "TrustMarket"
+      Jwt__Audience: "TrustMarket.Users"
+    ports:
+      - "5006:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: src/ApiGateway/TrustMarket.ApiGateway/Dockerfile
+    container_name: trustmarket-api-gateway
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ReverseProxy__Clusters__users-cluster__Destinations__users-api__Address: "http://user-service:8080/"
+      ReverseProxy__Clusters__catalog-cluster__Destinations__catalog-api__Address: "http://catalog-service:8080/"
+      ReverseProxy__Clusters__chat-cluster__Destinations__chat-api__Address: "http://chat-service:8080/"
+      ReverseProxy__Clusters__finance-cluster__Destinations__finance-api__Address: "http://finance-service:8080/"
+      ReverseProxy__Clusters__review-cluster__Destinations__review-api__Address: "http://review-service:8080/"
+    ports:
+      - "5000:8080"
+    depends_on:
+      - user-service
+      - catalog-service
+      - chat-service
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: trustmarket-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - api-gateway
+
+volumes:
+  postgres_data:
