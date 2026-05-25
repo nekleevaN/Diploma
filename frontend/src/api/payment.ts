@@ -8,6 +8,7 @@ export interface OrderDto {
   adTitle: string
   amount: number
   status: 'Pending' | 'Hold' | 'Completed' | 'Cancelled' | 'Refunded' | 'Failed' | 'Expired' | 'AwaitingConfirmation'
+  hasDelivery: boolean
   createdAt: string
   updatedAt?: string | null
 }

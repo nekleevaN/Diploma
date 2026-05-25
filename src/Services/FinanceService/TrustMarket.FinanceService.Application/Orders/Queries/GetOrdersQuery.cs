@@ -12,6 +12,7 @@ public record OrderDto(
     string AdTitle,
     decimal Amount,
     string Status,
+    bool HasDelivery,
     DateTime CreatedAt,
     DateTime? UpdatedAt);
 
@@ -58,5 +59,5 @@ public class GetOrderByIdQueryHandler : IRequestHandler<GetOrderByIdQuery, Resul
 internal static class OrderMapper
 {
     public static OrderDto ToDto(TrustMarket.FinanceService.Domain.Entities.Order o) =>
-        new(o.Id, o.AdvertisementId, o.BuyerId, o.SellerId, o.AdTitle, o.Amount, o.Status.ToString(), o.CreatedAt, o.UpdatedAt);
+        new(o.Id, o.AdvertisementId, o.BuyerId, o.SellerId, o.AdTitle, o.Amount, o.Status.ToString(), o.HasDelivery, o.CreatedAt, o.UpdatedAt);
 }

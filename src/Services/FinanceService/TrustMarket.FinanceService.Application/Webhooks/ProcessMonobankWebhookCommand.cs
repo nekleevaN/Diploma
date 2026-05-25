@@ -66,6 +66,12 @@ public class ProcessMonobankWebhookCommandHandler : IRequestHandler<ProcessMonob
                 {
                     var finalized = await _monobank.FinalizeHoldAsync(order.InvoiceId, order.Amount, ct);
                     _logger.LogInformation("Order {OrderId}: auto-finalize (no delivery) — {Result}", orderId, finalized ? "ok" : "failed");
+                    if (finalized)
+                    {
+                        order.MarkAsCompleted(DateTime.UtcNow);
+                        await _publishEndpoint.Publish(new OrderCompletedIntegrationEvent(
+                            order.Id, order.AdvertisementId, order.BuyerId, order.SellerId, order.Amount), ct);
+                    }
                 }
                 break;
 
