@@ -1,0 +1,48 @@
+# .NET
+bin/
+obj/
+out/
+*.user
+*.suo
+.vs/
+.vscode/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Bb]uild/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+*.csproj.user
+*.rsuser
+
+# Rider
+.idea/
+
+# User-specific files
+*.userprefs
+
+# NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# Environment files
+.env
+*.env.local
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+# Docker
+docker-compose.override.yml.local
