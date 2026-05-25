@@ -162,10 +162,12 @@ import { ref, onMounted, computed } from 'vue'
 import { offersApi, type OfferDto } from '@/api/offers'
 import { catalogApi } from '@/api/catalog'
 import { useAuthStore } from '@/stores/auth'
+import { useNotificationsStore } from '@/stores/notifications'
 import AppIcon from '@/components/AppIcon.vue'
 import type { AdListItem } from '@/types'
 
 const auth = useAuthStore()
+const notifications = useNotificationsStore()
 const activeTab = ref<'buyer' | 'seller'>('seller')
 const tabs = [
   { id: 'seller' as const, label: 'Пропозиції на мої оголошення' },
@@ -225,6 +227,7 @@ async function respond(offerId: string, action: 'accept' | 'reject' | 'counter')
     await offersApi.respond(offerId, action, counterPrice.value, sellerNote.value || undefined)
     respondingOffer.value = null
     await loadSellerOffers()
+    notifications.refresh()
   } finally {
     responding.value = false
   }
