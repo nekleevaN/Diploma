@@ -64,7 +64,14 @@
     </div>
   </div>
 
-  
+  <div v-else-if="data.type === 'viewing_cancelled'" class="mt-2 rounded-2xl overflow-hidden border border-gray-200 bg-gray-50 max-w-xs shadow-sm">
+    <div class="px-4 py-2.5 flex items-center gap-2">
+      <AppIcon name="x-circle" size="w-4 h-4" class="text-gray-400 shrink-0" />
+      <p class="text-xs text-gray-500">Угода не відбудеться</p>
+    </div>
+  </div>
+
+
   <div v-else-if="data.type === 'viewing_followup'" class="mt-2 rounded-2xl overflow-hidden border border-purple-200 bg-purple-50 max-w-sm shadow-sm">
     <div class="px-4 py-3">
       <div class="flex items-center gap-2 mb-2">

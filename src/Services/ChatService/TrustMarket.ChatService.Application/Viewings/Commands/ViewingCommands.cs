@@ -158,9 +158,13 @@ public class RespondToViewingCommandHandler : IRequestHandler<RespondToViewingCo
 public class ViewingFollowUpResponseCommandHandler : IRequestHandler<ViewingFollowUpResponseCommand, Result>
 {
     private readonly IViewingRequestRepository _repo;
+    private readonly IChatRepository _chatRepo;
 
-    public ViewingFollowUpResponseCommandHandler(IViewingRequestRepository repo)
-        => _repo = repo;
+    public ViewingFollowUpResponseCommandHandler(IViewingRequestRepository repo, IChatRepository chatRepo)
+    {
+        _repo = repo;
+        _chatRepo = chatRepo;
+    }
 
     public async Task<Result> Handle(ViewingFollowUpResponseCommand request, CancellationToken ct)
     {
@@ -170,6 +174,15 @@ public class ViewingFollowUpResponseCommandHandler : IRequestHandler<ViewingFoll
         viewing.SetFollowUpAction(request.Action);
         _repo.Update(viewing);
         await _repo.SaveChangesAsync(ct);
+
+        if (request.Action == "cancelled")
+        {
+            var msg = Message.Create(
+                viewing.ChatId, request.UserId,
+                $"{{\"type\":\"viewing_cancelled\",\"viewingId\":\"{viewing.Id}\"}}",
+                0, null);
+            await _chatRepo.SaveMessageAsync(msg, ct);
+        }
 
         return Result.Success();
     }
