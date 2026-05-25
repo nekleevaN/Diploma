@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="6b742b89-3a24-4cf8-a891-48e0210fc5da" name="anastasiia.dmytryshy@DCNOTE72 2026-05-23 16:20:02" runUser="DEVCOM\anastasiia.dmytryshy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-05-23T16:20:02.0570449+03:00" queuing="2026-05-23T16:20:02.0570454+03:00" start="2026-05-23T16:19:58.8049432+03:00" finish="2026-05-23T16:20:02.0649372+03:00" />
+  <TestSettings name="default" id="e22158ee-bb2b-466e-b797-878911a06989">
+    <Deployment runDeploymentRoot="anastasiia.dmytryshy_DCNOTE72_2026-05-23_16_20_02" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="ba4b18f7-0326-4505-b606-a08169e39106" testId="d915972f-9dc8-904c-147e-b1638bb26b33" testName="TrustMarket.NotificationService.IntegrationTests.Functional.ConsumerFunctionalTests.OrderPaidEvent_ConsumerHandlesGracefully" computerName="DCNOTE72" duration="00:00:00.0707113" startTime="2026-05-23T16:20:01.9269191+03:00" endTime="2026-05-23T16:20:01.9269192+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ba4b18f7-0326-4505-b606-a08169e39106" />
+    <UnitTestResult executionId="11005bcb-b206-4d0e-83c6-79e8f6063e3c" testId="5f5b3be1-7def-701f-f88e-0cc05cd92c73" testName="TrustMarket.NotificationService.IntegrationTests.Functional.ConsumerFunctionalTests.UserEmailConfirmedEvent_NotificationContainsFirstName" computerName="DCNOTE72" duration="00:00:00.3145468" startTime="2026-05-23T16:20:01.7168834+03:00" endTime="2026-05-23T16:20:01.7168835+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="11005bcb-b206-4d0e-83c6-79e8f6063e3c" />
+    <UnitTestResult executionId="05fb05d1-e5cf-41dd-9850-166320a489c4" testId="5f0d31c1-7d6c-14ab-5f5d-184bddf38ab1" testName="TrustMarket.NotificationService.IntegrationTests.Security.ConsumerSecurityTests.UserRegisteredEvent_EmptyFields_ConsumerHandlesGracefully" computerName="DCNOTE72" duration="00:00:00.3810379" startTime="2026-05-23T16:20:01.7173108+03:00" endTime="2026-05-23T16:20:01.7173108+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05fb05d1-e5cf-41dd-9850-166320a489c4" />
+    <UnitTestResult executionId="11d16879-021f-4da2-b401-c90f76231e2e" testId="83f47997-7ff8-1bdf-8063-36914f8058db" testName="TrustMarket.NotificationService.IntegrationTests.Integration.ConsumerIntegrationTests.UserRegisteredEvent_ConsumerSendsAdminNotification" computerName="DCNOTE72" duration="00:00:00.0743230" startTime="2026-05-23T16:20:01.8526331+03:00" endTime="2026-05-23T16:20:01.8526336+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="11d16879-021f-4da2-b401-c90f76231e2e" />
+    <UnitTestResult executionId="e0ac42d4-5eb6-44c9-b25a-394d46d17a6a" testId="646ae458-b2b2-6501-558b-491b5f135a4e" testName="TrustMarket.NotificationService.IntegrationTests.System.ConsumerSystemTests.Register_EmailConfirmed_CorrectNotificationsInOrder" computerName="DCNOTE72" duration="00:00:00.3647141" startTime="2026-05-23T16:20:01.7139454+03:00" endTime="2026-05-23T16:20:01.7139724+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e0ac42d4-5eb6-44c9-b25a-394d46d17a6a" />
+    <UnitTestResult executionId="7d1ced51-87d6-4e5c-987f-17e945cd5a1c" testId="cc688214-d8e4-54ce-f2f2-1a65a6bba042" testName="TrustMarket.NotificationService.IntegrationTests.Functional.ConsumerFunctionalTests.SuspiciousMessageEvent_AdminNotified" computerName="DCNOTE72" duration="00:00:00.0745862" startTime="2026-05-23T16:20:01.8115608+03:00" endTime="2026-05-23T16:20:01.8115611+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d1ced51-87d6-4e5c-987f-17e945cd5a1c" />
+    <UnitTestResult executionId="8d906376-ea7d-4ac6-a273-4a723f8ba92e" testId="093394e6-6286-b647-aaa9-c250a09fd6bb" testName="TrustMarket.NotificationService.IntegrationTests.Integration.ConsumerIntegrationTests.UserEmailConfirmedEvent_ConsumerSendsAdminNotification" computerName="DCNOTE72" duration="00:00:00.3370334" startTime="2026-05-23T16:20:01.7172858+03:00" endTime="2026-05-23T16:20:01.7172859+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d906376-ea7d-4ac6-a273-4a723f8ba92e" />
+    <UnitTestResult executionId="346027eb-7ce5-4ed3-8bff-0b0c69e1d3b7" testId="0987f020-8c6c-4031-7a75-37badc513652" testName="TrustMarket.NotificationService.IntegrationTests.Security.ConsumerSecurityTests.UserEmailConfirmedEvent_SpecialCharsInName_ConsumerHandlesGracefully" computerName="DCNOTE72" duration="00:00:00.1666719" startTime="2026-05-23T16:20:01.9267803+03:00" endTime="2026-05-23T16:20:01.9267813+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="346027eb-7ce5-4ed3-8bff-0b0c69e1d3b7" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="TrustMarket.NotificationService.IntegrationTests.Security.ConsumerSecurityTests.UserEmailConfirmedEvent_SpecialCharsInName_ConsumerHandlesGracefully" storage="c:\trustmarket\trustmarket\tests\trustmarket.notificationservice.integrationtests\bin\debug\net8.0\trustmarket.notificationservice.integrationtests.dll" id="0987f020-8c6c-4031-7a75-37badc513652">
+      <Execution id="346027eb-7ce5-4ed3-8bff-0b0c69e1d3b7" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.NotificationService.IntegrationTests\bin\Debug\net8.0\TrustMarket.NotificationService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.NotificationService.IntegrationTests.Security.ConsumerSecurityTests" name="UserEmailConfirmedEvent_SpecialCharsInName_ConsumerHandlesGracefully" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.NotificationService.IntegrationTests.System.ConsumerSystemTests.Register_EmailConfirmed_CorrectNotificationsInOrder" storage="c:\trustmarket\trustmarket\tests\trustmarket.notificationservice.integrationtests\bin\debug\net8.0\trustmarket.notificationservice.integrationtests.dll" id="646ae458-b2b2-6501-558b-491b5f135a4e">
+      <Execution id="e0ac42d4-5eb6-44c9-b25a-394d46d17a6a" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.NotificationService.IntegrationTests\bin\Debug\net8.0\TrustMarket.NotificationService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.NotificationService.IntegrationTests.System.ConsumerSystemTests" name="Register_EmailConfirmed_CorrectNotificationsInOrder" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.NotificationService.IntegrationTests.Integration.ConsumerIntegrationTests.UserRegisteredEvent_ConsumerSendsAdminNotification" storage="c:\trustmarket\trustmarket\tests\trustmarket.notificationservice.integrationtests\bin\debug\net8.0\trustmarket.notificationservice.integrationtests.dll" id="83f47997-7ff8-1bdf-8063-36914f8058db">
+      <Execution id="11d16879-021f-4da2-b401-c90f76231e2e" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.NotificationService.IntegrationTests\bin\Debug\net8.0\TrustMarket.NotificationService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.NotificationService.IntegrationTests.Integration.ConsumerIntegrationTests" name="UserRegisteredEvent_ConsumerSendsAdminNotification" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.NotificationService.IntegrationTests.Functional.ConsumerFunctionalTests.SuspiciousMessageEvent_AdminNotified" storage="c:\trustmarket\trustmarket\tests\trustmarket.notificationservice.integrationtests\bin\debug\net8.0\trustmarket.notificationservice.integrationtests.dll" id="cc688214-d8e4-54ce-f2f2-1a65a6bba042">
+      <Execution id="7d1ced51-87d6-4e5c-987f-17e945cd5a1c" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.NotificationService.IntegrationTests\bin\Debug\net8.0\TrustMarket.NotificationService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.NotificationService.IntegrationTests.Functional.ConsumerFunctionalTests" name="SuspiciousMessageEvent_AdminNotified" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.NotificationService.IntegrationTests.Integration.ConsumerIntegrationTests.UserEmailConfirmedEvent_ConsumerSendsAdminNotification" storage="c:\trustmarket\trustmarket\tests\trustmarket.notificationservice.integrationtests\bin\debug\net8.0\trustmarket.notificationservice.integrationtests.dll" id="093394e6-6286-b647-aaa9-c250a09fd6bb">
+      <Execution id="8d906376-ea7d-4ac6-a273-4a723f8ba92e" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.NotificationService.IntegrationTests\bin\Debug\net8.0\TrustMarket.NotificationService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.NotificationService.IntegrationTests.Integration.ConsumerIntegrationTests" name="UserEmailConfirmedEvent_ConsumerSendsAdminNotification" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.NotificationService.IntegrationTests.Security.ConsumerSecurityTests.UserRegisteredEvent_EmptyFields_ConsumerHandlesGracefully" storage="c:\trustmarket\trustmarket\tests\trustmarket.notificationservice.integrationtests\bin\debug\net8.0\trustmarket.notificationservice.integrationtests.dll" id="5f0d31c1-7d6c-14ab-5f5d-184bddf38ab1">
+      <Execution id="05fb05d1-e5cf-41dd-9850-166320a489c4" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.NotificationService.IntegrationTests\bin\Debug\net8.0\TrustMarket.NotificationService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.NotificationService.IntegrationTests.Security.ConsumerSecurityTests" name="UserRegisteredEvent_EmptyFields_ConsumerHandlesGracefully" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.NotificationService.IntegrationTests.Functional.ConsumerFunctionalTests.UserEmailConfirmedEvent_NotificationContainsFirstName" storage="c:\trustmarket\trustmarket\tests\trustmarket.notificationservice.integrationtests\bin\debug\net8.0\trustmarket.notificationservice.integrationtests.dll" id="5f5b3be1-7def-701f-f88e-0cc05cd92c73">
+      <Execution id="11005bcb-b206-4d0e-83c6-79e8f6063e3c" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.NotificationService.IntegrationTests\bin\Debug\net8.0\TrustMarket.NotificationService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.NotificationService.IntegrationTests.Functional.ConsumerFunctionalTests" name="UserEmailConfirmedEvent_NotificationContainsFirstName" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.NotificationService.IntegrationTests.Functional.ConsumerFunctionalTests.OrderPaidEvent_ConsumerHandlesGracefully" storage="c:\trustmarket\trustmarket\tests\trustmarket.notificationservice.integrationtests\bin\debug\net8.0\trustmarket.notificationservice.integrationtests.dll" id="d915972f-9dc8-904c-147e-b1638bb26b33">
+      <Execution id="ba4b18f7-0326-4505-b606-a08169e39106" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.NotificationService.IntegrationTests\bin\Debug\net8.0\TrustMarket.NotificationService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.NotificationService.IntegrationTests.Functional.ConsumerFunctionalTests" name="OrderPaidEvent_ConsumerHandlesGracefully" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="d915972f-9dc8-904c-147e-b1638bb26b33" executionId="ba4b18f7-0326-4505-b606-a08169e39106" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5f5b3be1-7def-701f-f88e-0cc05cd92c73" executionId="11005bcb-b206-4d0e-83c6-79e8f6063e3c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5f0d31c1-7d6c-14ab-5f5d-184bddf38ab1" executionId="05fb05d1-e5cf-41dd-9850-166320a489c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="83f47997-7ff8-1bdf-8063-36914f8058db" executionId="11d16879-021f-4da2-b401-c90f76231e2e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="646ae458-b2b2-6501-558b-491b5f135a4e" executionId="e0ac42d4-5eb6-44c9-b25a-394d46d17a6a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc688214-d8e4-54ce-f2f2-1a65a6bba042" executionId="7d1ced51-87d6-4e5c-987f-17e945cd5a1c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="093394e6-6286-b647-aaa9-c250a09fd6bb" executionId="8d906376-ea7d-4ac6-a273-4a723f8ba92e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0987f020-8c6c-4031-7a75-37badc513652" executionId="346027eb-7ce5-4ed3-8bff-0b0c69e1d3b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="8" executed="8" passed="8" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.16)&#xD;
+[xUnit.net 00:00:00.16]   Discovering: TrustMarket.NotificationService.IntegrationTests&#xD;
+[xUnit.net 00:00:00.30]   Discovered:  TrustMarket.NotificationService.IntegrationTests&#xD;
+[xUnit.net 00:00:00.30]   Starting:    TrustMarket.NotificationService.IntegrationTests&#xD;
+[xUnit.net 00:00:01.85]   Finished:    TrustMarket.NotificationService.IntegrationTests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

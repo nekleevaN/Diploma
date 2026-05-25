@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="506e2cf4-75c3-4e78-b25f-1defdbaae524" name="anastasiia.dmytryshy@DCNOTE72 2026-05-23 16:20:02" runUser="DEVCOM\anastasiia.dmytryshy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-05-23T16:20:02.4411047+03:00" queuing="2026-05-23T16:20:02.4411051+03:00" start="2026-05-23T16:19:56.2879543+03:00" finish="2026-05-23T16:20:03.7587256+03:00" />
+  <TestSettings name="default" id="4dfa33da-c637-4058-bcd7-d74ca5dcd41a">
+    <Deployment runDeploymentRoot="anastasiia.dmytryshy_DCNOTE72_2026-05-23_16_20_02" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="49020ea1-2dbc-473e-b685-6064e483716a" testId="4ddb59c4-cc61-b05a-afae-3141e59b279c" testName="TrustMarket.CatalogService.IntegrationTests.Database.CatalogDbConstraintTests.CascadeDelete_RemovesOffersWhenAdDeleted" computerName="DCNOTE72" duration="00:00:00.0208475" startTime="2026-05-23T16:20:03.6628182+03:00" endTime="2026-05-23T16:20:03.6628185+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49020ea1-2dbc-473e-b685-6064e483716a" />
+    <UnitTestResult executionId="5a5f7a91-f1cb-44b9-bc01-bfc824ad2f72" testId="cde46075-9c45-66f9-4bf5-aba59248d860" testName="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests.ReserveAd_AlreadyReserved_Returns409" computerName="DCNOTE72" duration="00:00:00.1329125" startTime="2026-05-23T16:20:03.2440230+03:00" endTime="2026-05-23T16:20:03.2440237+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a5f7a91-f1cb-44b9-bc01-bfc824ad2f72" />
+    <UnitTestResult executionId="8e37a0f9-2cc0-483a-a60a-f908881badf8" testId="212adade-8212-23bb-0140-e55649e77d6b" testName="TrustMarket.CatalogService.IntegrationTests.Integration.AdvertisementIntegrationTests.CreateAd_ValidRequest_SavesAdvertisementToDb" computerName="DCNOTE72" duration="00:00:00.0753522" startTime="2026-05-23T16:20:03.0106006+03:00" endTime="2026-05-23T16:20:03.0106010+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e37a0f9-2cc0-483a-a60a-f908881badf8" />
+    <UnitTestResult executionId="a76e694b-8550-47d5-897f-1061bbf169d9" testId="620fdbe6-ebd4-860a-720c-c1b2a3fae2d8" testName="TrustMarket.CatalogService.IntegrationTests.Security.CatalogSecurityTests.CreateAd_NoToken_Returns401" computerName="DCNOTE72" duration="00:00:00.0996046" startTime="2026-05-23T16:20:02.7696336+03:00" endTime="2026-05-23T16:20:02.7696346+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a76e694b-8550-47d5-897f-1061bbf169d9" />
+    <UnitTestResult executionId="92840320-391b-4ef6-9bce-d9b609fc0501" testId="acb28961-9883-d692-b2c1-001f1e9e7ced" testName="TrustMarket.CatalogService.IntegrationTests.System.AdOfferSystemTests.CreateAd_CreateOffer_AcceptOffer_AdStatusIsReserved" computerName="DCNOTE72" duration="00:00:02.9379183" startTime="2026-05-23T16:20:02.3925396+03:00" endTime="2026-05-23T16:20:02.3925635+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="92840320-391b-4ef6-9bce-d9b609fc0501" />
+    <UnitTestResult executionId="ce3025b5-efe4-49c1-af38-9a179cc673a0" testId="0b13765e-19a3-4ed1-4fa8-85eef57e1410" testName="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests.CreateAd_WithoutToken_Returns401" computerName="DCNOTE72" duration="00:00:00.0578322" startTime="2026-05-23T16:20:03.3850097+03:00" endTime="2026-05-23T16:20:03.3850101+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ce3025b5-efe4-49c1-af38-9a179cc673a0" />
+    <UnitTestResult executionId="3839c5b9-5957-4593-980b-3fe09873a27f" testId="5e4a72e7-842d-ce88-4405-165f16815db5" testName="TrustMarket.CatalogService.IntegrationTests.Database.CatalogDbConstraintTests.Offer_FkToAdvertisement_IsEnforced" computerName="DCNOTE72" duration="00:00:00.0324655" startTime="2026-05-23T16:20:03.4919104+03:00" endTime="2026-05-23T16:20:03.4919109+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3839c5b9-5957-4593-980b-3fe09873a27f" />
+    <UnitTestResult executionId="75ec6bbb-7aa3-42ab-bede-ee0e0f94b4fc" testId="ac39ac67-91b7-3018-6ab0-17332c6916ba" testName="TrustMarket.CatalogService.IntegrationTests.Security.CatalogSecurityTests.DeleteAd_ByNonOwner_Returns400" computerName="DCNOTE72" duration="00:00:00.2201494" startTime="2026-05-23T16:20:02.6531440+03:00" endTime="2026-05-23T16:20:02.6531446+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="75ec6bbb-7aa3-42ab-bede-ee0e0f94b4fc" />
+    <UnitTestResult executionId="94bde124-3d65-4d8d-80e7-851ef5b784c4" testId="b997ee09-8094-8314-c9f6-ab5038fae5df" testName="TrustMarket.CatalogService.IntegrationTests.Security.CatalogSecurityTests.CreateAd_XssInTitle_StoredSafelyAndReturned" computerName="DCNOTE72" duration="00:00:00.1090607" startTime="2026-05-23T16:20:02.8986770+03:00" endTime="2026-05-23T16:20:02.8986777+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="94bde124-3d65-4d8d-80e7-851ef5b784c4" />
+    <UnitTestResult executionId="70fdc7c9-b007-4b67-a1fb-ed52a0ad2c2b" testId="39ec95d7-81b2-d89c-c7f1-829a306eb85c" testName="TrustMarket.CatalogService.IntegrationTests.Database.CatalogDbConstraintTests.MigrateAsync_CreatesAdvertisementsTable" computerName="DCNOTE72" duration="00:00:00.0373929" startTime="2026-05-23T16:20:03.5954867+03:00" endTime="2026-05-23T16:20:03.5954871+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="70fdc7c9-b007-4b67-a1fb-ed52a0ad2c2b" />
+    <UnitTestResult executionId="832bc9bf-5ae1-46d3-9d6f-3d06efa25f58" testId="858dfc85-2aed-32cb-c7ae-8f4cc540a845" testName="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests.DeleteAd_ByNonOwner_Returns400OrForbidden" computerName="DCNOTE72" duration="00:00:00.0761717" startTime="2026-05-23T16:20:03.0969817+03:00" endTime="2026-05-23T16:20:03.0969822+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="832bc9bf-5ae1-46d3-9d6f-3d06efa25f58" />
+    <UnitTestResult executionId="6c6760e5-1c00-4469-be98-c00b41d34c6d" testId="2a9cecea-9772-1291-b05b-cdddcfcd7442" testName="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests.CreateAd_EmailNotConfirmed_Returns403" computerName="DCNOTE72" duration="00:00:00.0630420" startTime="2026-05-23T16:20:03.3168560+03:00" endTime="2026-05-23T16:20:03.3168566+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c6760e5-1c00-4469-be98-c00b41d34c6d" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Security.CatalogSecurityTests.DeleteAd_ByNonOwner_Returns400" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="ac39ac67-91b7-3018-6ab0-17332c6916ba">
+      <Execution id="75ec6bbb-7aa3-42ab-bede-ee0e0f94b4fc" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Security.CatalogSecurityTests" name="DeleteAd_ByNonOwner_Returns400" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Integration.AdvertisementIntegrationTests.CreateAd_ValidRequest_SavesAdvertisementToDb" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="212adade-8212-23bb-0140-e55649e77d6b">
+      <Execution id="8e37a0f9-2cc0-483a-a60a-f908881badf8" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Integration.AdvertisementIntegrationTests" name="CreateAd_ValidRequest_SavesAdvertisementToDb" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Database.CatalogDbConstraintTests.Offer_FkToAdvertisement_IsEnforced" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="5e4a72e7-842d-ce88-4405-165f16815db5">
+      <Execution id="3839c5b9-5957-4593-980b-3fe09873a27f" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Database.CatalogDbConstraintTests" name="Offer_FkToAdvertisement_IsEnforced" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Database.CatalogDbConstraintTests.MigrateAsync_CreatesAdvertisementsTable" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="39ec95d7-81b2-d89c-c7f1-829a306eb85c">
+      <Execution id="70fdc7c9-b007-4b67-a1fb-ed52a0ad2c2b" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Database.CatalogDbConstraintTests" name="MigrateAsync_CreatesAdvertisementsTable" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests.DeleteAd_ByNonOwner_Returns400OrForbidden" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="858dfc85-2aed-32cb-c7ae-8f4cc540a845">
+      <Execution id="832bc9bf-5ae1-46d3-9d6f-3d06efa25f58" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests" name="DeleteAd_ByNonOwner_Returns400OrForbidden" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests.ReserveAd_AlreadyReserved_Returns409" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="cde46075-9c45-66f9-4bf5-aba59248d860">
+      <Execution id="5a5f7a91-f1cb-44b9-bc01-bfc824ad2f72" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests" name="ReserveAd_AlreadyReserved_Returns409" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests.CreateAd_WithoutToken_Returns401" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="0b13765e-19a3-4ed1-4fa8-85eef57e1410">
+      <Execution id="ce3025b5-efe4-49c1-af38-9a179cc673a0" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests" name="CreateAd_WithoutToken_Returns401" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Security.CatalogSecurityTests.CreateAd_NoToken_Returns401" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="620fdbe6-ebd4-860a-720c-c1b2a3fae2d8">
+      <Execution id="a76e694b-8550-47d5-897f-1061bbf169d9" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Security.CatalogSecurityTests" name="CreateAd_NoToken_Returns401" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Security.CatalogSecurityTests.CreateAd_XssInTitle_StoredSafelyAndReturned" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="b997ee09-8094-8314-c9f6-ab5038fae5df">
+      <Execution id="94bde124-3d65-4d8d-80e7-851ef5b784c4" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Security.CatalogSecurityTests" name="CreateAd_XssInTitle_StoredSafelyAndReturned" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Database.CatalogDbConstraintTests.CascadeDelete_RemovesOffersWhenAdDeleted" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="4ddb59c4-cc61-b05a-afae-3141e59b279c">
+      <Execution id="49020ea1-2dbc-473e-b685-6064e483716a" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Database.CatalogDbConstraintTests" name="CascadeDelete_RemovesOffersWhenAdDeleted" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.System.AdOfferSystemTests.CreateAd_CreateOffer_AcceptOffer_AdStatusIsReserved" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="acb28961-9883-d692-b2c1-001f1e9e7ced">
+      <Execution id="92840320-391b-4ef6-9bce-d9b609fc0501" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.System.AdOfferSystemTests" name="CreateAd_CreateOffer_AcceptOffer_AdStatusIsReserved" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests.CreateAd_EmailNotConfirmed_Returns403" storage="c:\trustmarket\trustmarket\tests\trustmarket.catalogservice.integrationtests\bin\debug\net8.0\trustmarket.catalogservice.integrationtests.dll" id="2a9cecea-9772-1291-b05b-cdddcfcd7442">
+      <Execution id="6c6760e5-1c00-4469-be98-c00b41d34c6d" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.CatalogService.IntegrationTests\bin\Debug\net8.0\TrustMarket.CatalogService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.CatalogService.IntegrationTests.Functional.AdvertisementFunctionalTests" name="CreateAd_EmailNotConfirmed_Returns403" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="4ddb59c4-cc61-b05a-afae-3141e59b279c" executionId="49020ea1-2dbc-473e-b685-6064e483716a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cde46075-9c45-66f9-4bf5-aba59248d860" executionId="5a5f7a91-f1cb-44b9-bc01-bfc824ad2f72" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="212adade-8212-23bb-0140-e55649e77d6b" executionId="8e37a0f9-2cc0-483a-a60a-f908881badf8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="620fdbe6-ebd4-860a-720c-c1b2a3fae2d8" executionId="a76e694b-8550-47d5-897f-1061bbf169d9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="acb28961-9883-d692-b2c1-001f1e9e7ced" executionId="92840320-391b-4ef6-9bce-d9b609fc0501" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0b13765e-19a3-4ed1-4fa8-85eef57e1410" executionId="ce3025b5-efe4-49c1-af38-9a179cc673a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5e4a72e7-842d-ce88-4405-165f16815db5" executionId="3839c5b9-5957-4593-980b-3fe09873a27f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ac39ac67-91b7-3018-6ab0-17332c6916ba" executionId="75ec6bbb-7aa3-42ab-bede-ee0e0f94b4fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b997ee09-8094-8314-c9f6-ab5038fae5df" executionId="94bde124-3d65-4d8d-80e7-851ef5b784c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="39ec95d7-81b2-d89c-c7f1-829a306eb85c" executionId="70fdc7c9-b007-4b67-a1fb-ed52a0ad2c2b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="858dfc85-2aed-32cb-c7ae-8f4cc540a845" executionId="832bc9bf-5ae1-46d3-9d6f-3d06efa25f58" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2a9cecea-9772-1291-b05b-cdddcfcd7442" executionId="6c6760e5-1c00-4469-be98-c00b41d34c6d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="12" executed="12" passed="12" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.16)&#xD;
+[xUnit.net 00:00:00.24]   Discovering: TrustMarket.CatalogService.IntegrationTests&#xD;
+[xUnit.net 00:00:00.34]   Discovered:  TrustMarket.CatalogService.IntegrationTests&#xD;
+[xUnit.net 00:00:00.34]   Starting:    TrustMarket.CatalogService.IntegrationTests&#xD;
+[16:19:58 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:19:58 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:19:58 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:19:58 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:19:58 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:19:59 DBG] Starting bus instances: IBus&#xD;
+[16:19:59 DBG] Starting bus: loopback://localhost/&#xD;
+[16:19:59 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:19:59 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:19:59 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:19:59 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:19:59 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:19:59 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gherwrd5bdxmtux7dn&#xD;
+[16:19:59 INF] Bus started: loopback://localhost/&#xD;
+[16:19:59 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:01 DBG] Create send transport: loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:01 DBG] SEND loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent 30840000-7d37-104a-d879-08deb8cdfec0 TrustMarket.Shared.Contracts.IntegrationEvents.AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:02 DBG] Create send transport: loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:OfferCreatedIntegrationEvent&#xD;
+[16:20:02 DBG] SEND loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:OfferCreatedIntegrationEvent 30840000-7d37-104a-6dfb-08deb8cdff36 TrustMarket.Shared.Contracts.IntegrationEvents.OfferCreatedIntegrationEvent&#xD;
+[16:20:02 DBG] Create send transport: loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:OfferRespondedIntegrationEvent&#xD;
+[16:20:02 DBG] SEND loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:OfferRespondedIntegrationEvent 30840000-7d37-104a-3b9a-08deb8cdff40 TrustMarket.Shared.Contracts.IntegrationEvents.OfferRespondedIntegrationEvent&#xD;
+[16:20:02 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:02 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:02 DBG] Starting bus instances: IBus&#xD;
+[16:20:02 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gherw8ehbdxmtux9n5&#xD;
+[16:20:02 INF] Bus started: loopback://localhost/&#xD;
+[16:20:02 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:02 DBG] Create send transport: loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:02 DBG] SEND loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent 30840000-7d37-104a-ce1b-08deb8cdff64 TrustMarket.Shared.Contracts.IntegrationEvents.AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:02 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:02 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:02 DBG] Starting bus instances: IBus&#xD;
+[16:20:02 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gheri66nbdxmtux9di&#xD;
+[16:20:02 INF] Bus started: loopback://localhost/&#xD;
+[16:20:02 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:02 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:02 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:02 DBG] Starting bus instances: IBus&#xD;
+[16:20:02 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gherwxc1bdxmtux9rg&#xD;
+[16:20:02 INF] Bus started: loopback://localhost/&#xD;
+[16:20:02 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:02 DBG] Create send transport: loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:02 DBG] SEND loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent 30840000-7d37-104a-40ec-08deb8cdff8e TrustMarket.Shared.Contracts.IntegrationEvents.AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:02 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:02 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:02 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:02 DBG] Starting bus instances: IBus&#xD;
+[16:20:02 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:02 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gheriwuqbdxmtux9r3&#xD;
+[16:20:02 INF] Bus started: loopback://localhost/&#xD;
+[16:20:02 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:02 DBG] Create send transport: loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:02 DBG] SEND loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent 30840000-7d37-104a-78e1-08deb8cdffa3 TrustMarket.Shared.Contracts.IntegrationEvents.AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:03 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:03 DBG] Starting bus instances: IBus&#xD;
+[16:20:03 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gherwq6ibdxmtux9fm&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:03 DBG] Create send transport: loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:03 DBG] SEND loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent 30840000-7d37-104a-bd88-08deb8cdffaf TrustMarket.Shared.Contracts.IntegrationEvents.AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:03 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:03 DBG] Starting bus instances: IBus&#xD;
+[16:20:03 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gherwmbjbdxmtux9fz&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:03 DBG] Create send transport: loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:03 DBG] SEND loopback://localhost/urn:message:TrustMarket.Shared.Contracts.IntegrationEvents:AdvertisementCreatedIntegrationEvent 30840000-7d37-104a-a228-08deb8cdffc3 TrustMarket.Shared.Contracts.IntegrationEvents.AdvertisementCreatedIntegrationEvent&#xD;
+[16:20:03 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:03 DBG] Starting bus instances: IBus&#xD;
+[16:20:03 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gherip5abdxmtux9go&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:03 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:03 DBG] Starting bus instances: IBus&#xD;
+[16:20:03 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gheri5u3bdxmtux9g3&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:03 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:03 DBG] Starting bus instances: IBus&#xD;
+[16:20:03 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gherio9sbdxmtux98r&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:03 ERR] Failed executing DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (DbType = Guid), @p3='?' (Size = 8), @p4='?' (DbType = Decimal), @p5='?' (DbType = DateTime), @p6='?' (DbType = Decimal), @p7='?', @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']&#xD;
+INSERT INTO "Offers" ("Id", "AdvertisementId", "BuyerId", "BuyerName", "CounterPrice", "CreatedAt", "OfferedPrice", "SellerNote", "Status", "UpdatedAt")&#xD;
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);&#xD;
+[16:20:03 ERR] An exception occurred in the database while saving changes for context type 'TrustMarket.CatalogService.Infrastructure.Persistence.CatalogDbContext'.&#xD;
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+ ---&gt; Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.&#xD;
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)&#xD;
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   --- End of inner exception stack trace ---&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+ ---&gt; Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'FOREIGN KEY constraint failed'.&#xD;
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)&#xD;
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   --- End of inner exception stack trace ---&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[16:20:03 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:03 DBG] Starting bus instances: IBus&#xD;
+[16:20:03 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gheri1pzbdxmtux98i&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[16:20:03 INF] Configured endpoint OrderPaidCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderPaidCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCompletedCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCompletedCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint OrderCancelledCatalog, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.OrderCancelledCatalogConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserProfileUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserProfileUpdatedConsumer&#xD;
+[16:20:03 INF] Configured endpoint UserPayoutUpdated, Consumer: TrustMarket.CatalogService.Infrastructure.Messaging.UserPayoutUpdatedConsumer&#xD;
+[16:20:03 DBG] Starting bus instances: IBus&#xD;
+[16:20:03 DBG] Starting bus: loopback://localhost/&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderPaidCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCompletedCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/OrderCancelledCatalog&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserProfileUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/UserPayoutUpdated&#xD;
+[16:20:03 DBG] Endpoint Ready: loopback://localhost/DCNOTE72_testhost_bus_gnnyyyd7gherwkj7bdxmtuoyyr&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 WRN] The WebRootPath was not found: C:\TrustMarket\TrustMarket\src\Services\CatalogService\TrustMarket.CatalogService.Api\wwwroot. Static files may be unavailable.&#xD;
+[xUnit.net 00:00:06.01]   Finished:    TrustMarket.CatalogService.IntegrationTests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

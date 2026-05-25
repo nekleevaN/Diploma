@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="1c1ecf4a-b754-48f4-acd3-bf1c75e3a0e8" name="anastasiia.dmytryshy@DCNOTE72 2026-05-23 16:20:03" runUser="DEVCOM\anastasiia.dmytryshy" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-05-23T16:20:03.5709039+03:00" queuing="2026-05-23T16:20:03.5709044+03:00" start="2026-05-23T16:19:58.7169305+03:00" finish="2026-05-23T16:20:04.2664232+03:00" />
+  <TestSettings name="default" id="6088048d-0993-4d1a-ad81-46fe58b280b6">
+    <Deployment runDeploymentRoot="anastasiia.dmytryshy_DCNOTE72_2026-05-23_16_20_03" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="d6244163-f192-4ee9-86de-9b5507a63f49" testId="93b4afce-f4f5-baed-d6fe-ff71a77fd95e" testName="TrustMarket.ReviewService.IntegrationTests.Security.ReviewSecurityTests.SubmitReview_ExpiredToken_Returns401" computerName="DCNOTE72" duration="00:00:00.1017101" startTime="2026-05-23T16:20:03.6489086+03:00" endTime="2026-05-23T16:20:03.6489091+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d6244163-f192-4ee9-86de-9b5507a63f49" />
+    <UnitTestResult executionId="27570c64-08c5-4d89-b57a-477b334f79b0" testId="71d19812-43e0-c576-0fa6-3618af85c6c6" testName="TrustMarket.ReviewService.IntegrationTests.Security.ReviewSecurityTests.SubmitReview_EmailNotConfirmed_Returns403" computerName="DCNOTE72" duration="00:00:00.0434229" startTime="2026-05-23T16:20:03.7399038+03:00" endTime="2026-05-23T16:20:03.7399043+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="27570c64-08c5-4d89-b57a-477b334f79b0" />
+    <UnitTestResult executionId="10be83d9-f6cc-4eea-9b35-aa98f0cb1110" testId="4db58fc0-5fe5-1b5f-03c9-889c1a643ed1" testName="TrustMarket.ReviewService.IntegrationTests.Database.ReviewDbConstraintTests.Review_ExpiresAt_IsPersistedCorrectly" computerName="DCNOTE72" duration="00:00:00.0046155" startTime="2026-05-23T16:20:04.1445567+03:00" endTime="2026-05-23T16:20:04.1445569+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10be83d9-f6cc-4eea-9b35-aa98f0cb1110" />
+    <UnitTestResult executionId="298a0b6a-ea88-4968-98cb-00d9ead5f3d1" testId="7b8a7647-2cff-9442-78d5-a787e6845a50" testName="TrustMarket.ReviewService.IntegrationTests.Database.ReviewDbConstraintTests.UniqueOrderIdReviewType_ViolationThrows" computerName="DCNOTE72" duration="00:00:00.0377954" startTime="2026-05-23T16:20:04.0176879+03:00" endTime="2026-05-23T16:20:04.0176888+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="298a0b6a-ea88-4968-98cb-00d9ead5f3d1" />
+    <UnitTestResult executionId="8f54c140-da70-4478-8f06-047bae9144e2" testId="c2fd65b6-b07a-76fe-79da-2b5ddd093540" testName="TrustMarket.ReviewService.IntegrationTests.Functional.ReviewFunctionalTests.SubmitReview_ByNonOwner_Returns400" computerName="DCNOTE72" duration="00:00:00.0684208" startTime="2026-05-23T16:20:03.8895528+03:00" endTime="2026-05-23T16:20:03.8895536+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8f54c140-da70-4478-8f06-047bae9144e2" />
+    <UnitTestResult executionId="8c8fcaca-596e-4c3c-8f08-078745df219d" testId="126d585b-7629-fd1f-7cdc-e9ba8c88936b" testName="TrustMarket.ReviewService.IntegrationTests.System.ReviewSystemTests.InitPlaceholder_Submit_VerifyPublishedInDb" computerName="DCNOTE72" duration="00:00:02.4641414" startTime="2026-05-23T16:20:03.5348137+03:00" endTime="2026-05-23T16:20:03.5348347+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c8fcaca-596e-4c3c-8f08-078745df219d" />
+    <UnitTestResult executionId="c0b1dc05-9a31-456a-8ccf-174cdfc26dbb" testId="7d36a5aa-4430-95c4-6b28-2f8424efb436" testName="TrustMarket.ReviewService.IntegrationTests.Database.ReviewDbConstraintTests.MigrateAsync_CreatesReviewsTable" computerName="DCNOTE72" duration="00:00:00.0320128" startTime="2026-05-23T16:20:04.0945642+03:00" endTime="2026-05-23T16:20:04.0945644+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c0b1dc05-9a31-456a-8ccf-174cdfc26dbb" />
+    <UnitTestResult executionId="6dd9c7ff-eee7-49ee-95fe-6a3b37bd4cad" testId="70cca7bc-c0ac-836f-2ecd-b4794a33a0c0" testName="TrustMarket.ReviewService.IntegrationTests.Functional.ReviewFunctionalTests.SubmitReview_AlreadyPublished_Returns400" computerName="DCNOTE72" duration="00:00:00.0591351" startTime="2026-05-23T16:20:03.9530705+03:00" endTime="2026-05-23T16:20:03.9530708+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6dd9c7ff-eee7-49ee-95fe-6a3b37bd4cad" />
+    <UnitTestResult executionId="cafc95b8-66cc-4921-8588-0000ab314748" testId="58e25b0c-2cd4-8a95-fd34-26fde76d3f25" testName="TrustMarket.ReviewService.IntegrationTests.Security.ReviewSecurityTests.SubmitReview_WithoutToken_Returns401" computerName="DCNOTE72" duration="00:00:00.0282789" startTime="2026-05-23T16:20:03.6910244+03:00" endTime="2026-05-23T16:20:03.6910248+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cafc95b8-66cc-4921-8588-0000ab314748" />
+    <UnitTestResult executionId="79c0b75a-e8d2-4cbf-9958-248503196b92" testId="159c530d-7ffc-57f3-5b33-6e513927a89c" testName="TrustMarket.ReviewService.IntegrationTests.Integration.ReviewIntegrationTests.SubmitReview_ValidRequest_SavesWithPublishedStatus" computerName="DCNOTE72" duration="00:00:00.0685598" startTime="2026-05-23T16:20:03.8159821+03:00" endTime="2026-05-23T16:20:03.8159842+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79c0b75a-e8d2-4cbf-9958-248503196b92" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="TrustMarket.ReviewService.IntegrationTests.Functional.ReviewFunctionalTests.SubmitReview_ByNonOwner_Returns400" storage="c:\trustmarket\trustmarket\tests\trustmarket.reviewservice.integrationtests\bin\debug\net8.0\trustmarket.reviewservice.integrationtests.dll" id="c2fd65b6-b07a-76fe-79da-2b5ddd093540">
+      <Execution id="8f54c140-da70-4478-8f06-047bae9144e2" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.ReviewService.IntegrationTests\bin\Debug\net8.0\TrustMarket.ReviewService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.ReviewService.IntegrationTests.Functional.ReviewFunctionalTests" name="SubmitReview_ByNonOwner_Returns400" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.ReviewService.IntegrationTests.Database.ReviewDbConstraintTests.Review_ExpiresAt_IsPersistedCorrectly" storage="c:\trustmarket\trustmarket\tests\trustmarket.reviewservice.integrationtests\bin\debug\net8.0\trustmarket.reviewservice.integrationtests.dll" id="4db58fc0-5fe5-1b5f-03c9-889c1a643ed1">
+      <Execution id="10be83d9-f6cc-4eea-9b35-aa98f0cb1110" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.ReviewService.IntegrationTests\bin\Debug\net8.0\TrustMarket.ReviewService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.ReviewService.IntegrationTests.Database.ReviewDbConstraintTests" name="Review_ExpiresAt_IsPersistedCorrectly" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.ReviewService.IntegrationTests.Database.ReviewDbConstraintTests.UniqueOrderIdReviewType_ViolationThrows" storage="c:\trustmarket\trustmarket\tests\trustmarket.reviewservice.integrationtests\bin\debug\net8.0\trustmarket.reviewservice.integrationtests.dll" id="7b8a7647-2cff-9442-78d5-a787e6845a50">
+      <Execution id="298a0b6a-ea88-4968-98cb-00d9ead5f3d1" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.ReviewService.IntegrationTests\bin\Debug\net8.0\TrustMarket.ReviewService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.ReviewService.IntegrationTests.Database.ReviewDbConstraintTests" name="UniqueOrderIdReviewType_ViolationThrows" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.ReviewService.IntegrationTests.Integration.ReviewIntegrationTests.SubmitReview_ValidRequest_SavesWithPublishedStatus" storage="c:\trustmarket\trustmarket\tests\trustmarket.reviewservice.integrationtests\bin\debug\net8.0\trustmarket.reviewservice.integrationtests.dll" id="159c530d-7ffc-57f3-5b33-6e513927a89c">
+      <Execution id="79c0b75a-e8d2-4cbf-9958-248503196b92" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.ReviewService.IntegrationTests\bin\Debug\net8.0\TrustMarket.ReviewService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.ReviewService.IntegrationTests.Integration.ReviewIntegrationTests" name="SubmitReview_ValidRequest_SavesWithPublishedStatus" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.ReviewService.IntegrationTests.Functional.ReviewFunctionalTests.SubmitReview_AlreadyPublished_Returns400" storage="c:\trustmarket\trustmarket\tests\trustmarket.reviewservice.integrationtests\bin\debug\net8.0\trustmarket.reviewservice.integrationtests.dll" id="70cca7bc-c0ac-836f-2ecd-b4794a33a0c0">
+      <Execution id="6dd9c7ff-eee7-49ee-95fe-6a3b37bd4cad" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.ReviewService.IntegrationTests\bin\Debug\net8.0\TrustMarket.ReviewService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.ReviewService.IntegrationTests.Functional.ReviewFunctionalTests" name="SubmitReview_AlreadyPublished_Returns400" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.ReviewService.IntegrationTests.System.ReviewSystemTests.InitPlaceholder_Submit_VerifyPublishedInDb" storage="c:\trustmarket\trustmarket\tests\trustmarket.reviewservice.integrationtests\bin\debug\net8.0\trustmarket.reviewservice.integrationtests.dll" id="126d585b-7629-fd1f-7cdc-e9ba8c88936b">
+      <Execution id="8c8fcaca-596e-4c3c-8f08-078745df219d" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.ReviewService.IntegrationTests\bin\Debug\net8.0\TrustMarket.ReviewService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.ReviewService.IntegrationTests.System.ReviewSystemTests" name="InitPlaceholder_Submit_VerifyPublishedInDb" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.ReviewService.IntegrationTests.Database.ReviewDbConstraintTests.MigrateAsync_CreatesReviewsTable" storage="c:\trustmarket\trustmarket\tests\trustmarket.reviewservice.integrationtests\bin\debug\net8.0\trustmarket.reviewservice.integrationtests.dll" id="7d36a5aa-4430-95c4-6b28-2f8424efb436">
+      <Execution id="c0b1dc05-9a31-456a-8ccf-174cdfc26dbb" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.ReviewService.IntegrationTests\bin\Debug\net8.0\TrustMarket.ReviewService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.ReviewService.IntegrationTests.Database.ReviewDbConstraintTests" name="MigrateAsync_CreatesReviewsTable" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.ReviewService.IntegrationTests.Security.ReviewSecurityTests.SubmitReview_ExpiredToken_Returns401" storage="c:\trustmarket\trustmarket\tests\trustmarket.reviewservice.integrationtests\bin\debug\net8.0\trustmarket.reviewservice.integrationtests.dll" id="93b4afce-f4f5-baed-d6fe-ff71a77fd95e">
+      <Execution id="d6244163-f192-4ee9-86de-9b5507a63f49" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.ReviewService.IntegrationTests\bin\Debug\net8.0\TrustMarket.ReviewService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.ReviewService.IntegrationTests.Security.ReviewSecurityTests" name="SubmitReview_ExpiredToken_Returns401" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.ReviewService.IntegrationTests.Security.ReviewSecurityTests.SubmitReview_EmailNotConfirmed_Returns403" storage="c:\trustmarket\trustmarket\tests\trustmarket.reviewservice.integrationtests\bin\debug\net8.0\trustmarket.reviewservice.integrationtests.dll" id="71d19812-43e0-c576-0fa6-3618af85c6c6">
+      <Execution id="27570c64-08c5-4d89-b57a-477b334f79b0" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.ReviewService.IntegrationTests\bin\Debug\net8.0\TrustMarket.ReviewService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.ReviewService.IntegrationTests.Security.ReviewSecurityTests" name="SubmitReview_EmailNotConfirmed_Returns403" />
+    </UnitTest>
+    <UnitTest name="TrustMarket.ReviewService.IntegrationTests.Security.ReviewSecurityTests.SubmitReview_WithoutToken_Returns401" storage="c:\trustmarket\trustmarket\tests\trustmarket.reviewservice.integrationtests\bin\debug\net8.0\trustmarket.reviewservice.integrationtests.dll" id="58e25b0c-2cd4-8a95-fd34-26fde76d3f25">
+      <Execution id="cafc95b8-66cc-4921-8588-0000ab314748" />
+      <TestMethod codeBase="C:\TrustMarket\TrustMarket\tests\TrustMarket.ReviewService.IntegrationTests\bin\Debug\net8.0\TrustMarket.ReviewService.IntegrationTests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="TrustMarket.ReviewService.IntegrationTests.Security.ReviewSecurityTests" name="SubmitReview_WithoutToken_Returns401" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="93b4afce-f4f5-baed-d6fe-ff71a77fd95e" executionId="d6244163-f192-4ee9-86de-9b5507a63f49" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="71d19812-43e0-c576-0fa6-3618af85c6c6" executionId="27570c64-08c5-4d89-b57a-477b334f79b0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4db58fc0-5fe5-1b5f-03c9-889c1a643ed1" executionId="10be83d9-f6cc-4eea-9b35-aa98f0cb1110" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7b8a7647-2cff-9442-78d5-a787e6845a50" executionId="298a0b6a-ea88-4968-98cb-00d9ead5f3d1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c2fd65b6-b07a-76fe-79da-2b5ddd093540" executionId="8f54c140-da70-4478-8f06-047bae9144e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="126d585b-7629-fd1f-7cdc-e9ba8c88936b" executionId="8c8fcaca-596e-4c3c-8f08-078745df219d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7d36a5aa-4430-95c4-6b28-2f8424efb436" executionId="c0b1dc05-9a31-456a-8ccf-174cdfc26dbb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="70cca7bc-c0ac-836f-2ecd-b4794a33a0c0" executionId="6dd9c7ff-eee7-49ee-95fe-6a3b37bd4cad" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="58e25b0c-2cd4-8a95-fd34-26fde76d3f25" executionId="cafc95b8-66cc-4921-8588-0000ab314748" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="159c530d-7ffc-57f3-5b33-6e513927a89c" executionId="79c0b75a-e8d2-4cbf-9958-248503196b92" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="10" executed="10" passed="10" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 8.0.16)&#xD;
+[xUnit.net 00:00:00.22]   Discovering: TrustMarket.ReviewService.IntegrationTests&#xD;
+[xUnit.net 00:00:00.30]   Discovered:  TrustMarket.ReviewService.IntegrationTests&#xD;
+[xUnit.net 00:00:00.30]   Starting:    TrustMarket.ReviewService.IntegrationTests&#xD;
+[16:20:00 INF] Configured endpoint OrderDelivered, Consumer: TrustMarket.ReviewService.Infrastructure.Messaging.OrderDeliveredConsumer&#xD;
+[16:20:01 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 INF] Configured endpoint OrderDelivered, Consumer: TrustMarket.ReviewService.Infrastructure.Messaging.OrderDeliveredConsumer&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 INF] Configured endpoint OrderDelivered, Consumer: TrustMarket.ReviewService.Infrastructure.Messaging.OrderDeliveredConsumer&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 INF] Configured endpoint OrderDelivered, Consumer: TrustMarket.ReviewService.Infrastructure.Messaging.OrderDeliveredConsumer&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 INF] Configured endpoint OrderDelivered, Consumer: TrustMarket.ReviewService.Infrastructure.Messaging.OrderDeliveredConsumer&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 INF] Configured endpoint OrderDelivered, Consumer: TrustMarket.ReviewService.Infrastructure.Messaging.OrderDeliveredConsumer&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 INF] Configured endpoint OrderDelivered, Consumer: TrustMarket.ReviewService.Infrastructure.Messaging.OrderDeliveredConsumer&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:03 INF] Configured endpoint OrderDelivered, Consumer: TrustMarket.ReviewService.Infrastructure.Messaging.OrderDeliveredConsumer&#xD;
+[16:20:03 INF] Bus started: loopback://localhost/&#xD;
+[16:20:04 ERR] Failed executing DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime), @p6='?' (DbType = DateTime), @p7='?' (DbType = Guid), @p8='?' (DbType = DateTime), @p9='?' (DbType = Int32), @p10='?' (DbType = Guid), @p11='?' (DbType = Guid), @p12='?' (Size = 8), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?' (DbType = Int32), @p16='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']&#xD;
+INSERT INTO "Reviews" ("Id", "Comment", "Communication", "CreatedAt", "DescriptionAccuracy", "EditableUntil", "ExpiresAt", "OrderId", "PublishedAt", "Rating", "RevieweeId", "ReviewerId", "ReviewerName", "ShippingSpeed", "Status", "Type", "UpdatedAt")&#xD;
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16)&#xD;
+RETURNING "IsAnonymous";&#xD;
+[16:20:04 ERR] An exception occurred in the database while saving changes for context type 'TrustMarket.ReviewService.Infrastructure.Persistence.ReviewDbContext'.&#xD;
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+ ---&gt; Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'UNIQUE constraint failed: Reviews.ReviewerId, Reviews.RevieweeId, Reviews.OrderId'.&#xD;
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)&#xD;
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   --- End of inner exception stack trace ---&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+ ---&gt; Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'UNIQUE constraint failed: Reviews.ReviewerId, Reviews.RevieweeId, Reviews.OrderId'.&#xD;
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)&#xD;
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   --- End of inner exception stack trace ---&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[16:20:04 INF] Configured endpoint OrderDelivered, Consumer: TrustMarket.ReviewService.Infrastructure.Messaging.OrderDeliveredConsumer&#xD;
+[16:20:04 INF] Bus started: loopback://localhost/&#xD;
+[16:20:04 INF] Configured endpoint OrderDelivered, Consumer: TrustMarket.ReviewService.Infrastructure.Messaging.OrderDeliveredConsumer&#xD;
+[16:20:04 INF] Bus started: loopback://localhost/&#xD;
+[xUnit.net 00:00:04.41]   Finished:    TrustMarket.ReviewService.IntegrationTests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
