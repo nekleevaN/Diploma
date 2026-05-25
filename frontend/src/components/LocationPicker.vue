@@ -90,7 +90,7 @@ function placeMarker(L: any, lat: number, lng: number, address: string) {
 async function reverseGeocode(lat: number, lng: number): Promise<string> {
   try {
     const r = await fetch(
-      `https:
+      `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`
     )
     const data = await r.json()
     const a = data.address

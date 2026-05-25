@@ -144,7 +144,7 @@ async function start() {
 
 async function drawQR() {
   if (!qrCanvas.value || !sessionId.value) return
-  const diiaUrl = `https:
+  const diiaUrl = `https://diia.app/deeplink/${sessionId.value}`
   await QRCode.toCanvas(qrCanvas.value, diiaUrl, {
     width: 160,
     margin: 1,
