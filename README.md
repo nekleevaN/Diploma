@@ -6,7 +6,7 @@
 
 ## Автор
 
-- **ПІБ**: Дмитришин Анастасія
+- **ПІБ**: Дмитришин Анастасія Романівна
 - **Група**: ФЕП-42
 - **Керівник**: доц. Шувар Р. Я.
 - **Дата виконання**: 25.05.2026
@@ -23,16 +23,17 @@
 
 ## Опис функціоналу
 
-- Реєстрація та авторизація користувачів (JWT)
+- Реєстрація та авторизація користувачів (JWT + Google OAuth)
 - Верифікація особи через сервіс Дія
 - Публікація, редагування та видалення оголошень
-- Пошук оголошень за ключовими словами (PostgreSQL Full-Text Search)
+- Пошук та фільтрація оголошень за ключовими словами, категорією та іншими параметрами 
+- Перегляд оголошень на карті
 - Захищений чат між покупцем та продавцем (SignalR)
 - Антифрод-аналіз повідомлень у реальному часі (блокування номерів карток, телефонів, зовнішніх посилань)
-- Можливість погодити ціну через систему пропозицій (offers)
-- Запис та перегляд оголошення (viewing request)
+- Можливість погодити ціну через систему пропозицій
+- Запис на перегляд оголошення (viewing request) з автоматичним сповіщенням довіреної особи через email (SMTP) та Telegram
 - Оплата через Monobank з підтримкою split-платежів
-- Доставка через Нову Пошту (генерація ТТН)
+- Доставка через Нову Пошту
 - Сповіщення в Telegram про події (оплата, нове повідомлення тощо)
 - Система відгуків після завершення угоди
 
@@ -42,7 +43,7 @@
 
 | Клас / Файл | Призначення |
 |---|---|
-| `src/Services/UserService` | Реєстрація, авторизація, верифікація через Дію |
+| `src/Services/UserService` | Реєстрація, авторизація, Google OAuth, верифікація через Дію |
 | `src/Services/CatalogService` | Управління оголошеннями та пропозиціями |
 | `src/Services/ChatService` | Чат, перегляди, антифрод-аналізатор |
 | `src/Services/FinanceService` | Замовлення, оплата Monobank, доставка |
@@ -54,6 +55,7 @@
 | `RuleBasedFraudAnalyzer.cs` | Правила антифрод-аналізу повідомлень |
 | `ProcessMonobankWebhookCommandHandler.cs` | Обробка webhook-подій від Monobank |
 | `docker-compose.yml` | Опис усіх сервісів, баз даних та черги |
+| `scripts/init-multiple-dbs.sh` | Ініціалізація окремих БД для кожного сервісу |
 
 ---
 
@@ -72,17 +74,22 @@ git clone https://github.com/nekleevaN/Diploma.git
 cd Diploma
 ```
 
-### 3. Створення `.env` файлу
+### 3. Файл `.env`
 
-Створити файл `.env` у корені проєкту:
+Файл `.env` вже присутній у репозиторії та містить:
 
 ```
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postgres
-JWT_SECRET=your_jwt_secret_here
-MONOBANK_TOKEN=your_monobank_token
-TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+TELEGRAM_BOT_TOKEN=...
+TELEGRAM_ADMIN_CHAT_ID=...
 ```
+
+Якщо потрібно тестувати Monobank webhook локально (через ngrok або аналог), додайте до `.env`:
+
+```
+MONOBANK_WEBHOOK_URL=https://your-ngrok-url.ngrok.io
+```
+
+Решта змінних (JWT, PostgreSQL, Monobank токен) задані безпосередньо у `docker-compose.yml` для зручності локальної розробки.
 
 ### 4. Запуск через Docker
 
@@ -92,12 +99,20 @@ docker-compose up --build
 
 Сервіси після запуску:
 
-- **API Gateway**: http://localhost:5000
-- **Swagger (UserService)**: http://localhost:5001/swagger
-- **RabbitMQ Management**: http://localhost:15672 (guest/guest)
-- **PostgreSQL**: localhost:5432
+| Сервіс | URL |
+|---|---|
+| Frontend | http://localhost:3000 |
+| API Gateway | http://localhost:5000 |
+| UserService (Swagger) | http://localhost:5001/swagger |
+| CatalogService | http://localhost:5002 |
+| ChatService | http://localhost:5003 |
+| NotificationService | http://localhost:5004 |
+| FinanceService | http://localhost:5005 |
+| ReviewService | http://localhost:5006 |
+| RabbitMQ Management | http://localhost:15672 (guest/guest) |
+| PostgreSQL | localhost:5432 |
 
-### 5. Запуск фронтенду окремо (опційно)
+### 5. Запуск фронтенду окремо (для розробки)
 
 ```bash
 cd frontend
@@ -106,6 +121,34 @@ npm run dev
 ```
 
 Фронтенд: http://localhost:5173
+
+---
+
+## Тестування
+
+Проєкт містить unit та інтеграційні тести для кожного сервісу:
+
+```
+tests/
+├── TrustMarket.UserService.UnitTests
+├── TrustMarket.UserService.IntegrationTests
+├── TrustMarket.CatalogService.UnitTests
+├── TrustMarket.CatalogService.IntegrationTests
+├── TrustMarket.ChatService.UnitTests
+├── TrustMarket.ChatService.IntegrationTests
+├── TrustMarket.FinanceService.UnitTests
+├── TrustMarket.FinanceService.IntegrationTests
+├── TrustMarket.ReviewService.UnitTests
+├── TrustMarket.ReviewService.IntegrationTests
+├── TrustMarket.NotificationService.IntegrationTests
+└── TrustMarket.TestInfrastructure
+```
+
+Запуск усіх тестів:
+
+```bash
+dotnet test
+```
 
 ---
 
@@ -180,14 +223,16 @@ npm run dev
 ## Інструкція для користувача
 
 1. **Головна сторінка** — перегляд оголошень, пошук за назвою
-2. **Реєстрація / Вхід** — створення акаунту або авторизація
+2. **Реєстрація / Вхід** — створення акаунту, авторизація або вхід через Google
 3. **Створення оголошення** — кнопка "Додати оголошення", заповнити форму з ціною та фото
 4. **Купівля**:
    - Відкрити оголошення → натиснути "Купити"
    - Можна запропонувати свою ціну через кнопку "Зробити пропозицію"
+   - Ввести дані для доставки (якщо обрана доставка Новою Поштою)
    - Перейти до оплати через Monobank
-5. **Чат** — після підтвердження угоди відкривається захищений чат з продавцем
-6. **Відгук** — після завершення угоди з'являється форма для відгуку
+5. **Перегляд** — можна домовитись про особистий перегляд товару; при підтвердженні перегляду довірена особа отримає сповіщення через email та Telegram
+6. **Чат** — доступний одразу після відкриття оголошення, не потребує підтвердження угоди
+7. **Відгук** — після завершення угоди з'являється форма для відгуку
 
 ---
 
@@ -196,9 +241,10 @@ npm run dev
 | Проблема | Рішення |
 |---|---|
 | Сервіс не запускається | Перевірити чи Docker Desktop запущений |
-| Помилка підключення до БД | Перевірити змінні `POSTGRES_USER` / `POSTGRES_PASSWORD` у `.env` |
-| Webhook від Monobank не приходить | Потрібен публічний URL (ngrok для локальної розробки) |
-| Frontend не бачить API | Перевірити налаштування проксі у `vite.config.ts` |
+| Помилка підключення до БД | Переконатись, що контейнер `postgres` запустився (healthcheck) |
+| Webhook від Monobank не приходить | Додати публічний URL у `.env` як `MONOBANK_WEBHOOK_URL` (ngrok для локальної розробки) |
+| Frontend не бачить API | Перевірити налаштування проксі у `vite.config.ts` (dev) або `nginx.conf` (Docker) |
+| Бази даних не створились | Перевірити, чи виконався скрипт `scripts/init-multiple-dbs.sh` |
 
 ---
 
@@ -214,5 +260,3 @@ npm run dev
 ---
 
 ## Screenshots
-
-*(додайте скриншоти у папку `/screenshots/` та вставте їх тут)*
