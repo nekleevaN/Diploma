@@ -266,3 +266,21 @@ dotnet test
 ---
 
 ## Screenshots
+
+### Головна сторінка
+![Головна сторінка](screenshots/home.png)
+
+### Сторінка оголошення
+![Оголошення](screenshots/ad-detail.png)
+
+### Чат
+![Чат](screenshots/chat.png)
+
+### Checkout та оплата
+![Оплата](screenshots/checkout.png)
+
+### Карта оголошень
+![Карта](screenshots/map.png)
+
+### Профіль користувача
+![Профіль](screenshots/profile.png)
