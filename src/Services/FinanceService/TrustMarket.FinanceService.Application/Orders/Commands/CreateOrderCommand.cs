@@ -59,7 +59,7 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Res
             ? ""
             : $"{webhookBase.TrimEnd('/')}/api/webhooks/monobank";
 
-        var redirectUrl = $"{redirectBase.TrimEnd('/')}/payment/success?orderId={order.Id}";
+        var redirectUrl = $"{redirectBase.TrimEnd('/')}/payment/success?orderId={order.Id}&hasDelivery={request.HasDelivery.ToString().ToLower()}";
 
         var invoice = await _monobank.CreateHoldInvoiceAsync(
             amount: request.Amount,

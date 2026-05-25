@@ -13,16 +13,24 @@
       <template v-else-if="status === 'hold' || status === 'success'">
         <div class="flex justify-center mb-4"><AppIcon name="check-circle" size="w-14 h-14" class="text-teal-500" /></div>
         <h1 class="text-2xl font-bold text-gray-900 mb-2">Оплата підтверджена!</h1>
-        <p class="text-gray-500 text-sm mb-2">Кошти заморожено — продавець отримає їх після підтвердження доставки.</p>
-        <p class="text-gray-600 text-sm font-medium mb-6">Вкажіть відділення Нової Пошти для отримання товару.</p>
-        <div class="space-y-3">
-          <RouterLink v-if="orderId" :to="`/delivery/${orderId}`" class="btn-primary w-full block text-center flex items-center justify-center gap-1.5">
-            <AppIcon name="package" size="w-4 h-4" /> Вказати відділення НП
+        <template v-if="hasDelivery">
+          <p class="text-gray-500 text-sm mb-2">Кошти заморожено — продавець отримає їх після підтвердження доставки.</p>
+          <p class="text-gray-600 text-sm font-medium mb-6">Вкажіть відділення Нової Пошти для отримання товару.</p>
+          <div class="space-y-3">
+            <RouterLink v-if="orderId" :to="`/delivery/${orderId}`" class="btn-primary w-full block text-center flex items-center justify-center gap-1.5">
+              <AppIcon name="package" size="w-4 h-4" /> Вказати відділення НП
+            </RouterLink>
+            <RouterLink to="/orders" class="btn-secondary w-full block text-center">
+              Пізніше
+            </RouterLink>
+          </div>
+        </template>
+        <template v-else>
+          <p class="text-gray-500 text-sm mb-6">Товар передано при зустрічі. Кошти будуть перераховані продавцю автоматично.</p>
+          <RouterLink to="/orders" class="btn-primary w-full block text-center">
+            Перейти до замовлень
           </RouterLink>
-          <RouterLink to="/orders" class="btn-secondary w-full block text-center">
-            Пізніше
-          </RouterLink>
-        </div>
+        </template>
       </template>
 
       
@@ -64,6 +72,7 @@ import AppIcon from '@/components/AppIcon.vue'
 
 const route = useRoute()
 const orderId = computed(() => route.query.orderId as string | undefined)
+const hasDelivery = computed(() => route.query.hasDelivery !== 'false')
 const checking = ref(false)
 const status = ref<string | null>(null)
 

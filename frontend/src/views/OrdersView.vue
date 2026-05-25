@@ -104,7 +104,7 @@
         </div>
 
         
-        <div v-if="activeTab === 'buyer' && (order.status === 'Hold' || order.status === 'Completed' || order.status === 'AwaitingConfirmation')"
+        <div v-if="activeTab === 'buyer' && order.hasDelivery && (order.status === 'Hold' || order.status === 'Completed' || order.status === 'AwaitingConfirmation')"
           class="mt-3 pt-3 border-t border-gray-100">
           <div v-if="!deliveries[order.orderId]">
             <RouterLink :to="`/delivery/${order.orderId}`" class="text-xs text-teal-600 hover:underline flex items-center gap-1">
