@@ -103,7 +103,7 @@ docker-compose up --build
 |---|---|
 | Frontend | http://localhost:3000 |
 | API Gateway | http://localhost:5000 |
-| UserService (Swagger) | http://localhost:5001/swagger |
+| UserService | http://localhost:5001 |
 | CatalogService | http://localhost:5002 |
 | ChatService | http://localhost:5003 |
 | NotificationService | http://localhost:5004 |
@@ -223,6 +223,24 @@ dotnet test
 ```
 
 **Response** містить посилання на оплату Monobank (`pageUrl`).
+
+---
+
+## API Documentation
+
+Кожен мікросервіс надає інтерактивну документацію через **Swagger UI**, доступну в режимі розробки.
+
+Після запуску через Docker Compose (`docker compose up`) Swagger UI доступний за адресами:
+
+| Сервіс | URL |
+|---|---|
+| User Service | http://localhost:5001/swagger |
+| Catalog Service | http://localhost:5002/swagger |
+| Chat Service | http://localhost:5003/swagger |
+| Finance Service | http://localhost:5005/swagger |
+| Review Service | http://localhost:5006/swagger |
+
+> `ASPNETCORE_ENVIRONMENT=Development` вже встановлено в `docker-compose.yml`, тому Swagger активний без додаткових налаштувань.
 
 ---
 
