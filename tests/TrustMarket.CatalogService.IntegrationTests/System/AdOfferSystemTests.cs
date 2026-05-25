@@ -43,7 +43,7 @@ public class AdOfferSystemTests : IAsyncLifetime
             "Bearer", JwtTokenHelper.GenerateToken(userId));
 
     [Fact]
-    public async Task CreateAd_CreateOffer_AcceptOffer_AdStatusIsReserved()
+    public async Task CreateAd_CreateOffer_AcceptOffer_OfferStatusIsAccepted()
     {
         // 1. Seller creates ad
         AuthAs(_sellerId);
@@ -76,10 +76,12 @@ public class AdOfferSystemTests : IAsyncLifetime
         });
         acceptResp.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        // 4. Verify ad status
+        // 4. Offer is accepted; ad stays Active until OrderPaidIntegrationEvent is received
         using var scope = _factory.Services.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<CatalogDbContext>();
+        var offer = await db.Offers.FindAsync(offerId);
+        offer!.Status.Should().Be(OfferStatus.Accepted);
         var ad = await db.Advertisements.FindAsync(adId);
-        ad!.Status.Should().Be(AdvertisementStatus.Reserved);
+        ad!.Status.Should().Be(AdvertisementStatus.Active);
     }
 }
