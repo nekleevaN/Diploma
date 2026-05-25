@@ -19,11 +19,13 @@ public class ViewingController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> Propose([FromBody] ProposeViewingRequest request, CancellationToken ct)
     {
+        var displayName = User.FindFirstValue("display_name") ?? User.FindFirstValue("username");
         var result = await _mediator.Send(new ProposeViewingCommand(
             request.ChatId, request.AdvertisementId,
             CurrentUserId, request.ResponderId,
             request.AdTitle, request.LocationAddress,
             request.ProposedDateTime,
+            ProposerDisplayName: displayName,
             request.ProposerTrustedTelegramId,
             request.ProposerTrustedEmail), ct);
 
@@ -33,12 +35,12 @@ public class ViewingController : ControllerBase
     [HttpPut("{viewingId:guid}/respond")]
     public async Task<IActionResult> Respond(Guid viewingId, [FromBody] RespondViewingRequest request, CancellationToken ct)
     {
-        var username = User.FindFirstValue("username") ?? "Учасник";
+        var displayName = User.FindFirstValue("display_name") ?? User.FindFirstValue("username") ?? "Учасник";
         var result = await _mediator.Send(new RespondToViewingCommand(
             viewingId, CurrentUserId, request.Action,
             request.NewDateTime,
             request.ResponderTrustedTelegramId,
-            ResponderName: username,
+            ResponderName: displayName,
             ProposerName: request.ProposerName,
             ResponderTrustedEmail: request.ResponderTrustedEmail), ct);
 
