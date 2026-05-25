@@ -46,6 +46,10 @@ Thumbs.db
 # Uploaded user files
 **/wwwroot/uploads/
 
+# Test results
+**/TestResults/
+*.trx
+
 
 # Docker
 docker-compose.override.yml.local
