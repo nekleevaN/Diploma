@@ -97,8 +97,8 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       RabbitMq__Host: rabbitmq
-      Telegram__BotToken: "${TELEGRAM_BOT_TOKEN:-YOUR_BOT_TOKEN_HERE}"
-      Telegram__AdminChatId: "${TELEGRAM_ADMIN_CHAT_ID:-0}"
+      Telegram__BotToken: "8895815538:AAG6pWzgCCDvDr1KFmJ5dTugo4ErzGpsLuM"
+      Telegram__AdminChatId: "485086927"
     ports:
       - "5004:8080"
     depends_on:
