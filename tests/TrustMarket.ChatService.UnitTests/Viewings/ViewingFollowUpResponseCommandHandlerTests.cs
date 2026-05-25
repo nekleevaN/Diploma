@@ -10,9 +10,10 @@ namespace TrustMarket.ChatService.UnitTests.Viewings;
 public class ViewingFollowUpResponseCommandHandlerTests
 {
     private readonly IViewingRequestRepository _viewingRepo = Substitute.For<IViewingRequestRepository>();
+    private readonly IChatRepository _chatRepo = Substitute.For<IChatRepository>();
 
     private ViewingFollowUpResponseCommandHandler CreateHandler() =>
-        new(_viewingRepo);
+        new(_viewingRepo, _chatRepo);
 
     private static ViewingRequest MakeViewing() =>
         ViewingRequest.Create(
