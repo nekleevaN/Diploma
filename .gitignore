@@ -50,6 +50,10 @@ Thumbs.db
 **/TestResults/
 *.trx
 
+# Frontend build output
+frontend/dist/
+frontend/node_modules/
+
 
 # Docker
 docker-compose.override.yml.local
