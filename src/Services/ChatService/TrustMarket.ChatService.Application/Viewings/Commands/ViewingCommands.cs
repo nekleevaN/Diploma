@@ -15,6 +15,7 @@ public record ProposeViewingCommand(
     string AdTitle,
     string? LocationAddress,
     DateTime ProposedDateTime,
+    string? ProposerDisplayName = null,
     long? ProposerTrustedTelegramId = null,
     string? ProposerTrustedEmail = null) : IRequest<Result<Guid>>;
 
@@ -60,7 +61,7 @@ public class ProposeViewingCommandHandler : IRequestHandler<ProposeViewingComman
         var systemMessage = Message.Create(
             request.ChatId,
             request.ProposerId,
-            BuildProposalMessageContent(viewing.Id, request.ProposedDateTime, request.ResponderId),
+            BuildProposalMessageContent(viewing.Id, request.ProposedDateTime, request.ResponderId, request.ProposerDisplayName),
             0, null);
 
         await _chatRepo.SaveMessageAsync(systemMessage, ct);
@@ -68,10 +69,15 @@ public class ProposeViewingCommandHandler : IRequestHandler<ProposeViewingComman
         return Result.Success(viewing.Id);
     }
 
-    public static string BuildProposalMessageContent(Guid viewingId, DateTime dt, Guid responderId)
-        => $"{{\"type\":\"viewing_proposal\",\"viewingId\":\"{viewingId}\"," +
-           $"\"dateTime\":\"{dt:O}\"," +
-           $"\"responderId\":\"{responderId}\"}}";
+    public static string BuildProposalMessageContent(Guid viewingId, DateTime dt, Guid responderId, string? proposerName = null)
+    {
+        var nameJson = !string.IsNullOrEmpty(proposerName)
+            ? $",\"proposerName\":\"{proposerName}\""
+            : "";
+        return $"{{\"type\":\"viewing_proposal\",\"viewingId\":\"{viewingId}\"," +
+               $"\"dateTime\":\"{dt:O}\"," +
+               $"\"responderId\":\"{responderId}\"{nameJson}}}";
+    }
 }
 
 public class RespondToViewingCommandHandler : IRequestHandler<RespondToViewingCommand, Result>

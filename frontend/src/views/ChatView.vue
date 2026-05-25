@@ -105,6 +105,7 @@
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { chatApi } from '@/api/chat'
+import { catalogApi } from '@/api/catalog'
 import { useChatStore } from '@/stores/chat'
 import { useAuthStore } from '@/stores/auth'
 import FraudWarning from '@/components/FraudWarning.vue'
@@ -242,6 +243,12 @@ onMounted(async () => {
     const d = data as any
     chatResponderId.value = d.buyerId === auth.userId ? d.sellerId : d.buyerId
     await scrollToBottom()
+    if (chatAdId.value) {
+      try {
+        const { data: ad } = await catalogApi.getById(chatAdId.value)
+        chatAdLocation.value = (ad as any).locationAddress ?? null
+      } catch { }
+    }
   } finally {
     loading.value = false
   }

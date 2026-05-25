@@ -151,7 +151,7 @@ async function respond(action: 'accept' | 'decline' | 'reschedule') {
         : undefined,
       responderTrustedTelegramId: auth.trustedContactTelegramId ?? undefined,
       responderTrustedEmail: auth.trustedContactEmail || undefined,
-      proposerName: props.senderName ?? undefined
+      proposerName: (data.value as any).proposerName ?? props.senderName ?? undefined
     })
     showReschedule.value = false
     emit('responded')
